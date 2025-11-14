@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3E199835-36BF-2BB7-B1D0-FA39F41C3E10" containerWithKeyObject="28EC6250-290B-2FA4-84DE-A1EF2DD3116B" localFKIndex="57555CD1-25E0-6EFD-5CC4-A01E7F7064A9" name="GS_TENDENCIA_MERCADO_GS_HABILIDADE_FK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:21 UTC</createdTime>
+<generatorID>3B1EA546-11C0-D8CA-20E9-9921B6DEEAA8</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<referredTableLongName>GS_HABILIDADE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>63BBB0F0-393E-630F-5D13-593D3AE899DF</referredTableID>
+<keyObject>2BA08FC9-3132-41FF-3CF5-6BCE02E9EF90</keyObject>
+<referredKeyID>2BA08FC9-3132-41FF-3CF5-6BCE02E9EF90</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_habilidade</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

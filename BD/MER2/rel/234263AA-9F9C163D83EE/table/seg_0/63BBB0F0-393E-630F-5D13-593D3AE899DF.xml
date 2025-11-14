@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="63BBB0F0-393E-630F-5D13-593D3AE899DF" name="GS_HABILIDADE">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>A0A90B78-61F5-F0B8-E4AF-68CFC127E025</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_habilidade" id="BE660A9E-F841-C85E-D6CD-EFC1EF9BA7C8">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador da habilidade]]></commentInRDBMS>
+<generatorID>42743C75-8AAB-559B-1CFE-DD992B12C0AE</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_nome" id="11537280-8397-483C-1B8C-2847157E5E71">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome da habilidade (ex: “Programação PLC”)]]></commentInRDBMS>
+<generatorID>88081C4A-494E-E9A0-DAE7-2E4E7726835D</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_categoria" id="960722B1-346D-9E30-1A4E-F54DA6114DAA">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Técnica, comportamental, digital, IA etc.]]></commentInRDBMS>
+<generatorID>A54EAAEF-1D1D-A090-D6A4-D70CB02FC59F</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_descricao" id="D2E42B74-7FA1-BEB0-B2E4-E13286F6C286">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descrição da habilidade]]></commentInRDBMS>
+<generatorID>E21E922E-40F2-69BB-6BE5-FE8C042459F6</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2BA08FC9-3132-41FF-3CF5-6BCE02E9EF90" name="GS_HABILIDADE_PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>7D0159DC-5293-E901-2B0E-F25C027D32FE</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE660A9E-F841-C85E-D6CD-EFC1EF9BA7C8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

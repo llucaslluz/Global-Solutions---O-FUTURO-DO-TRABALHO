@@ -1,0 +1,165 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="28EC6250-290B-2FA4-84DE-A1EF2DD3116B" name="GS_TENDENCIA_MERCADO">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>8C1CCC5C-C99B-BFDE-8C71-C1D72EC17599</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_tendencia" id="6E4AFF41-A5B5-0748-F1DC-C0EB22D96325">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador da tendência]]></commentInRDBMS>
+<generatorID>F8F3E888-2648-1B1D-6C7E-092EB860A553</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_escopo_tendencia_mercado" id="73DEC2EB-DFDB-6E2F-8ABA-FD222687BFFD">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[GLOBAL, SETORIAL, EMPRESA]]></commentInRDBMS>
+<generatorID>E69F51DC-3330-9FD7-495E-6A8A45DC3DA0</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_horizonte_tendencia_mercado" id="B8EE3742-6C7F-A164-7C76-4A327893367F">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Curto, Médio, Longo prazo]]></commentInRDBMS>
+<generatorID>E14CDCC9-43A1-D801-A44C-FC330CF59118</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vl_indice_demanda_tendencia" id="170BA0BA-059E-F510-CFB6-DD72CB714080">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[0–100 indicando demanda/urgência]]></commentInRDBMS>
+<generatorID>8B2CB2CE-AADF-F378-7A07-741609C87993</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_fonte_tendencia_mercado" id="387B8486-8160-A4AE-6695-9975ECA8D0AE">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Relatório, estudo, base interna etc.]]></commentInRDBMS>
+<generatorID>1883725D-081E-FE18-A2F6-B17038A68FD8</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_observacao_tendencia_mercado" id="CEACE7A8-46D5-10AF-0628-4D708A84CAE3">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Explicação da tendência]]></commentInRDBMS>
+<generatorID>971CE4E7-7E58-132B-4F32-296F0277784A</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_data_atualizacao_tendencia" id="F65E98FC-AC4D-6BC3-3A72-5994F0ACA534">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Última atualização]]></commentInRDBMS>
+<generatorID>8ACF1E41-C6F7-E237-897E-174F091BA8EB</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GS_EMPRESA_id_empresa" id="DB2F930C-55A7-8F19-839F-6D0D95A78D56">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>C7908B1B-D465-AAE4-4DD8-79819EECECB4</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="11BA0BD2-AA03-D771-26A0-36C6B37D68DD" referredColumn="01AFDB08-1CF5-A321-19FC-9C739E95C628"/>
+</associations>
+</Column>
+<Column name="GS_HABILIDADE_id_habilidade" id="324B8143-DDFE-083D-4432-46924BB5C184">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>A6B57BCD-84D6-5A3C-78EA-BDC3A8F84522</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3E199835-36BF-2BB7-B1D0-FA39F41C3E10" referredColumn="BE660A9E-F841-C85E-D6CD-EFC1EF9BA7C8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3AC105C8-E82E-AFAB-2E81-5C476E4B4DD5" name="GS_TENDENCIA_MERCADO_PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>1EFF7D18-BD5D-3B59-C538-BE1A5C8477EE</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6E4AFF41-A5B5-0748-F1DC-C0EB22D96325"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="73A19969-EFD0-1EE2-E2D7-9F56736F01BA" name="GS_TENDENCIA_MERCADO_GS_EMPRESA_FK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:21 UTC</createdTime>
+<generatorID>F271DE32-FA42-1939-2FC7-C63B75EA3EF4</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB2F930C-55A7-8F19-839F-6D0D95A78D56"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="57555CD1-25E0-6EFD-5CC4-A01E7F7064A9" name="GS_TENDENCIA_MERCADO_GS_HABILIDADE_FK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:21 UTC</createdTime>
+<generatorID>3B1EA546-11C0-D8CA-20E9-9921B6DEEAA8</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="324B8143-DDFE-083D-4432-46924BB5C184"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

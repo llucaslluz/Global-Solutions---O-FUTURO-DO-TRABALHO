@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D0D646D6-B642-A66E-E0EB-F96D90BDE0DC" name="GS_TRILHA">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>49198EA5-185A-1627-775F-11FC37433210</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_trilha" id="D689847B-FD9D-F682-93E2-7D1721DF702D">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador da trilha]]></commentInRDBMS>
+<generatorID>6B5F0734-E85B-828E-32D4-08A5C8ECBA9D</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_nome_trilha" id="73108F79-9802-A9EC-F40E-6B747CDF79B2">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome da trilha]]></commentInRDBMS>
+<generatorID>FE71A67E-680D-91A4-3161-2C202B3B5444</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_descricao_trilha" id="6FFCECD9-1937-A0DC-E969-C7280CEC2FEC">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descrição resumida]]></commentInRDBMS>
+<generatorID>8C1C79C2-6578-DFD9-F8D2-E7DB073CE04A</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_tipo_trilha" id="8BE379F9-BC7B-31A5-8393-64DB2418A8AF">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[CARREIRA, CURSOS, INTERNA_EMPRESA]]></commentInRDBMS>
+<generatorID>926BD0BC-496A-D4C0-0B70-0A8C665ED3A8</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_foco" id="C9BC5DDE-036C-F7F0-DA3E-899D38A75B10">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Foco principal (ex.: “Automação industrial”)]]></commentInRDBMS>
+<generatorID>FE40CE09-14A8-7691-84B9-D05FFD32A81D</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_data_criacao_trilha" id="5C06493F-8EAD-009D-6687-B4490D15667A">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Data de criação]]></commentInRDBMS>
+<generatorID>E7CF4D40-D0F8-35CA-AE94-51F7DF49FB1F</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="03B021BE-B54C-18FA-79DA-E507B4393F04" name="GS_TRILHA_PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>1C61091B-968D-BD99-BE90-8F1ED81F6532</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D689847B-FD9D-F682-93E2-7D1721DF702D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

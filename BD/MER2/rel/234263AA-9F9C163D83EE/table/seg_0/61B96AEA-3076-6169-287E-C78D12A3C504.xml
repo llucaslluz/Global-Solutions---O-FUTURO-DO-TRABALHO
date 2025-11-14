@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="61B96AEA-3076-6169-287E-C78D12A3C504" name="GS_RECOMENDACAO_IA">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>B04E2247-1D5E-EFDD-574A-AF09D84F9B5F</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_recomendacao" id="AC873DD3-6D30-E02C-AE26-ADE918949C96">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador da recomendação]]></commentInRDBMS>
+<generatorID>C8A08446-29E4-025E-368C-29BD7BE40A7F</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_tipo_recomendacao_ia" id="8356851F-069A-CDBD-612E-331CABC47AA9">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[CURSO, VAGA, TRILHA, OBJETIVO]]></commentInRDBMS>
+<generatorID>BA598AAE-E7F4-9BCF-5A5B-E4249F1E8240</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_referencia_recomendacao" id="EBC94809-DCF0-8F6B-8508-4FB363FF2ED7">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID do curso/vaga/trilha/objetivo conforme tipo]]></commentInRDBMS>
+<generatorID>2C71BF4E-F968-F1FA-2E54-50D102A38F4C</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_texto_resumo_recomendacao" id="850B4DB0-0933-67D6-70D7-7E0C72845B20">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Explicação da sugestão (“recomendo porque…”)]]></commentInRDBMS>
+<generatorID>E820D99C-1067-EFEA-5ED3-DC6BBC02044D</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="st_prioridade_recomendacao" id="AE1893F7-42DF-7017-B307-CB086A34B65C">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<comment><![CDATA[1 = alta, 2 = média, 3 = baixa]]></comment>
+<generatorID>17A73BAD-93B6-D225-5A87-E9302B3F35AC</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_data_geracao_recomendacao" id="A042F0FF-FD56-A8D0-6775-D56B1FDBBBA9">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<comment><![CDATA[Quando a IA gerou a recomendação]]></comment>
+<generatorID>19225EB7-7D6D-201A-B12A-A12816870FCA</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GS_USUARIO_id_usuario" id="CA5F971E-C80E-9A99-923E-B8C48D350FCA">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>D15C7366-7295-8F55-727B-E93A66297D96</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0EB8AC9A-ED10-3A68-1CDF-2147E408CE9C" referredColumn="660563D8-3828-D1AC-4F8E-AA8BD4689945"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF0A6A27-1400-1890-1234-A38EC06F2363" name="GS_RECOMENDACAO_IA_PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>BA11A8A1-8506-8702-3799-A87509480491</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC873DD3-6D30-E02C-AE26-ADE918949C96"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="67588EDF-E20B-8235-0A72-1BBEE2D8CF1D" name="GS_RECOMENDACAO_IA_GS_USUARIO_FK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:21 UTC</createdTime>
+<generatorID>9946EAA3-C99B-A8B6-6F3D-2CF11B621F1D</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA5F971E-C80E-9A99-923E-B8C48D350FCA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

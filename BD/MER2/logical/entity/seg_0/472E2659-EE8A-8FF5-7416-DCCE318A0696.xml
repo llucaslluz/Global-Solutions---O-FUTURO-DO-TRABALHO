@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="472E2659-EE8A-8FF5-7416-DCCE318A0696" name="GS_ITEM_MATRIZ_HABILIDADE">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:07:48 UTC</createdTime>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="vl_nivel_atual" id="04E6B488-26DA-998F-9A7C-73133C65DE40">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:09:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[0–100 representando nível atual]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_nivel_minimo" id="1156DFD3-2C33-CAD7-B020-DED90B692086">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:09:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[Para VAGA: nível mínimo exigido]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_nivel_desejado" id="3CC7D65E-6228-41F0-BF9C-F0DE395D76B3">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:09:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[Para objetivos/planos (opcional)]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_habilidade" id="342A31F6-0E3E-0C8D-23A8-EFE8846F6CA3">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:14:01 UTC</createdTime>
+<generatorID>AA4AEC1E-734D-D829-4087-4F73612E798A</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>42743C75-8AAB-559B-1CFE-DD992B12C0AE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_matriz" id="23775EA0-2EA1-0622-5F98-F6605E97A1CF">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:14:23 UTC</createdTime>
+<generatorID>28915F32-86BE-9898-FA44-48C587CB26C1</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>2352B0DA-15C0-BB3B-5602-7502355F7F7D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EBE3F73A-0CA4-2D3B-4C2B-2CD0023E7838" name="GS_ITEM_MATRIZ_HABILIDADE PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:12:32 UTC</createdTime>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>23775EA0-2EA1-0622-5F98-F6605E97A1CF</attributeRef>
+<attributeRef>342A31F6-0E3E-0C8D-23A8-EFE8846F6CA3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

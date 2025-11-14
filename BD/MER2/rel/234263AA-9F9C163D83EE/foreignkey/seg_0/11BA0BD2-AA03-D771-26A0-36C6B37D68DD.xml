@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="11BA0BD2-AA03-D771-26A0-36C6B37D68DD" containerWithKeyObject="28EC6250-290B-2FA4-84DE-A1EF2DD3116B" localFKIndex="73A19969-EFD0-1EE2-E2D7-9F56736F01BA" name="GS_TENDENCIA_MERCADO_GS_EMPRESA_FK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:21 UTC</createdTime>
+<generatorID>F271DE32-FA42-1939-2FC7-C63B75EA3EF4</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<referredTableLongName>GS_EMPRESA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C0855D60-5CE7-8FAD-3CEB-58A211CD0995</referredTableID>
+<keyObject>B9228456-EC14-415B-2331-6089ACB8CCD4</keyObject>
+<referredKeyID>B9228456-EC14-415B-2331-6089ACB8CCD4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_empresa</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

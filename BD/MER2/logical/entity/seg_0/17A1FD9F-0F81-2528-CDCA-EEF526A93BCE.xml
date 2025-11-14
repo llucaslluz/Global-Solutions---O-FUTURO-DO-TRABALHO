@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="17A1FD9F-0F81-2528-CDCA-EEF526A93BCE" name="GS_VAGA">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:19:56 UTC</createdTime>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_vaga" id="2B1192C5-A2FC-F5AE-444D-45A0DA15BBF2">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:20:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador da vaga]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_titulo" id="3D93BAF0-0F21-C6C6-0665-95AAE3E0D4A1">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:20:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome da vaga (ex: “Técnico em Automação”)]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_senioridade" id="347FA01C-7E88-B847-66BE-7E0B47636A87">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:20:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[Júnior, Pleno, Sênior]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_tipo_vaga" id="69D544E0-0419-885B-92A7-1F9E9D303E30">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:20:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[Interno, Externo, Estágio, Jovem Aprendiz]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_descricao" id="23373DB6-9657-646B-93B0-43241C20D6BF">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:20:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descrição da vaga]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_empresa" id="409DF6AA-319A-E111-21D7-04758F698B63">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:24:18 UTC</createdTime>
+<generatorID>78EC2C87-4536-2E7E-2870-3C1B76E1EDAB</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>F4F52369-1871-186D-BFC2-32A05CD204B5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3266463D-51DA-ECF1-40E0-4B0E42CEB71A" name="GS_VAGA PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:20:53 UTC</createdTime>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2B1192C5-A2FC-F5AE-444D-45A0DA15BBF2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

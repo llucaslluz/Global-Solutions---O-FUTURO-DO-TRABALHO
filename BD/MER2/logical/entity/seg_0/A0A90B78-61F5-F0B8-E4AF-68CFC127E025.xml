@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A0A90B78-61F5-F0B8-E4AF-68CFC127E025" name="GS_HABILIDADE">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 21:59:47 UTC</createdTime>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_habilidade" id="42743C75-8AAB-559B-1CFE-DD992B12C0AE">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:00:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador da habilidade]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_nome" id="88081C4A-494E-E9A0-DAE7-2E4E7726835D">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:00:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome da habilidade (ex: “Programação PLC”)]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_categoria" id="A54EAAEF-1D1D-A090-D6A4-D70CB02FC59F">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:00:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[Técnica, comportamental, digital, IA etc.]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_descricao" id="E21E922E-40F2-69BB-6BE5-FE8C042459F6">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:00:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descrição da habilidade]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7D0159DC-5293-E901-2B0E-F25C027D32FE" name="GS_HABILIDADE PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:00:25 UTC</createdTime>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>42743C75-8AAB-559B-1CFE-DD992B12C0AE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

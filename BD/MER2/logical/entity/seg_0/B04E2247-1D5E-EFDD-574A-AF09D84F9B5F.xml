@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B04E2247-1D5E-EFDD-574A-AF09D84F9B5F" name="GS_RECOMENDACAO_IA">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:52:46 UTC</createdTime>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_recomendacao" id="C8A08446-29E4-025E-368C-29BD7BE40A7F">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:52:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador da recomendação]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_tipo_recomendacao_ia" id="BA598AAE-E7F4-9BCF-5A5B-E4249F1E8240">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:52:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[CURSO, VAGA, TRILHA, OBJETIVO]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_referencia_recomendacao" id="2C71BF4E-F968-F1FA-2E54-50D102A38F4C">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:52:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID do curso/vaga/trilha/objetivo conforme tipo]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_texto_resumo_recomendacao" id="E820D99C-1067-EFEA-5ED3-DC6BBC02044D">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:52:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Explicação da sugestão (“recomendo porque…”)]]></commentInRDBMS>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="st_prioridade_recomendacao" id="17A73BAD-93B6-D225-5A87-E9302B3F35AC">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:52:59 UTC</createdTime>
+<comment><![CDATA[1 = alta, 2 = média, 3 = baixa]]></comment>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_data_geracao_recomendacao" id="19225EB7-7D6D-201A-B12A-A12816870FCA">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:52:59 UTC</createdTime>
+<comment><![CDATA[Quando a IA gerou a recomendação]]></comment>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="D15C7366-7295-8F55-727B-E93A66297D96">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:57:42 UTC</createdTime>
+<generatorID>9946EAA3-C99B-A8B6-6F3D-2CF11B621F1D</generatorID>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>2EDC6634-A9FD-F192-DA82-8C836AD63060</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BA11A8A1-8506-8702-3799-A87509480491" name="GS_RECOMENDACAO_IA PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:53:28 UTC</createdTime>
+<ownerDesignName>MER2</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C8A08446-29E4-025E-368C-29BD7BE40A7F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
