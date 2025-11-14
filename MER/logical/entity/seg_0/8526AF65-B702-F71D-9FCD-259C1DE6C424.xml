@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8526AF65-B702-F71D-9FCD-259C1DE6C424" name="GS_OBJETIVO_USUARIO">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:25:24 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_objetivo" id="1E129218-EF64-BA7C-09D5-B6DE21F2A796">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:26:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador do objetivo]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_tipo_objetivo" id="81D1650A-2BD8-D399-DC44-A972DCD89EAA">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:26:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[PROMOCAO, TRANSICAO, PRIMEIRO_EMP etc.]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_descricao_objetivo" id="9E3A452F-CCE4-7476-9B7C-E37804E4F063">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:26:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[Detalhes do objetivo]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_data_criacao" id="B3B5323A-76E7-B579-2CA0-C8FF4B981B4E">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:26:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[Data de criação do objetivo]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="E32C1424-E39C-F165-C467-A5B2866A0859">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:28:52 UTC</createdTime>
+<generatorID>1B89A3DF-438B-7FBC-AC7C-20A16D453E63</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>2EDC6634-A9FD-F192-DA82-8C836AD63060</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_curso" id="8CD2D0E1-4E07-240D-5742-9A9C38620061">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:31:51 UTC</createdTime>
+<generatorID>444869E7-87B9-B0BE-6B0A-C2D1E0AD99C5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>EE308CD1-16F1-5E23-84D7-F16528A1F4D6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_vaga" id="B62C150F-5DEB-CBFD-B290-863E2AC97946">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:31:58 UTC</createdTime>
+<generatorID>885739CC-9740-DB33-E8AB-2AAEBD7CEFF9</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>2B1192C5-A2FC-F5AE-444D-45A0DA15BBF2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2D114F48-264F-6B27-B390-C1ACF4637FF4" name="GS_OBJETIVO_USUARIO PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:26:47 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1E129218-EF64-BA7C-09D5-B6DE21F2A796</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

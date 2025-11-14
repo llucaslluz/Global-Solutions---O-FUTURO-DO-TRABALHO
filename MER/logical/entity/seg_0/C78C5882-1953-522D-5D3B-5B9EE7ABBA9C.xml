@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C78C5882-1953-522D-5D3B-5B9EE7ABBA9C" name="GS_CURSO">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:14:52 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_curso" id="EE308CD1-16F1-5E23-84D7-F16528A1F4D6">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:15:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador do curso]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_nome" id="2E4BA067-8700-2EDE-5D6F-8B8E0155DD33">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:15:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome do curso]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_descricao" id="14D9FAA1-D80C-79F2-BD64-0137F049A841">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:15:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descrição do curso]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_carga_horaria" id="D3BB9A8E-68FE-E3FE-B6B9-7E2EAA4EACD0">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:15:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Carga horária em horas]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_nivel" id="81AB4F49-9BEF-72EF-D57E-FC986C5F23A9">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:15:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Básico, intermediário, avançado]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_escola" id="75B662F4-E417-DC5B-760E-2145D3877BE7">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:18:38 UTC</createdTime>
+<generatorID>37B199E3-7E03-D124-9207-6FC4685E5D19</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>DC482F63-BCC4-5544-1E3C-A666AA94ECFD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CD2D79CC-5820-53DA-EB50-518488D4CF86" name="GS_CURSO PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:15:31 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EE308CD1-16F1-5E23-84D7-F16528A1F4D6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

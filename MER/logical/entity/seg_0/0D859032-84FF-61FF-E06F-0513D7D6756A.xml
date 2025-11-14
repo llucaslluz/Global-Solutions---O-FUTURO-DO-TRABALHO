@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0D859032-84FF-61FF-E06F-0513D7D6756A" name="GS_HISTORICO_MATRIZ_USUARIO">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:58:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_historico_matriz_usuario" id="577E5AB1-A9C3-5CE5-58FE-1802F59D6AD1">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:58:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador do registro histórico]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_data_registro_historico_matriz_usuario" id="D03CF02E-3FBD-CF5C-822B-971D261BA5E7">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:58:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[Data da captura do estado]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_origem" id="44D932C5-DC32-DB65-0461-49745D8A6C92">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:58:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[CURSO, EXPERIENCIA, AJUSTE_MANUAL]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_descricao_evento" id="EC0FEFD1-3BC2-0E94-9359-ACA75F152B81">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:58:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ex: “Concluiu curso X”, “Promoção para líder”]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_matriz" id="81CA51C0-4110-2B15-0947-92CB435B6138">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:23:47 UTC</createdTime>
+<generatorID>45BD4C2E-C17B-F3F0-AE04-1C8FD689AD1B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>23775EA0-2EA1-0622-5F98-F6605E97A1CF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_habilidade" id="F8971348-A77C-1761-838B-09D07C8EF408">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:23:48 UTC</createdTime>
+<generatorID>45BD4C2E-C17B-F3F0-AE04-1C8FD689AD1B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>342A31F6-0E3E-0C8D-23A8-EFE8846F6CA3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="65815E3D-F75F-0378-1E18-728DE42FFD4A" name="GS_HISTORICO_MATRIZ_USUARIO PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:59:24 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>577E5AB1-A9C3-5CE5-58FE-1802F59D6AD1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

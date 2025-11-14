@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8F982C7E-6C39-50D8-FF42-96B45A135F40" name="GS_FONTE_PERFIL_USUARIO">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:01:25 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_fonte_perfil_usuario" id="E6BC62A1-5057-7C28-08F5-A0506783AC95">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:01:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador da fonte]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_tipo_fonte_perfil_usuario" id="B6CC7404-AB07-996C-1ECB-A21B2AA0C28B">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:01:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[CURRICULO, EXPERIENCIA, FORMACAO, CERTIFICACAO]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_descricao_perfil_usuario" id="3567ABAD-6270-F0F3-4CE1-E9D3B2CB62EB">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:01:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descrição da fonte]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_data_registro_perfil_usuario" id="B066A7D6-3714-0B4A-B311-53C7929C2897">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:01:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Data de registro]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="ED86DC0C-E02D-D9F2-5806-9384B1B19EC6">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:07:20 UTC</createdTime>
+<generatorID>EAE2B329-E57A-F903-7F56-F19BA0B12DA5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>2EDC6634-A9FD-F192-DA82-8C836AD63060</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E5B8B911-FB11-1D82-113C-8AB9FE6C3238" name="GS_FONTE_PERFIL_USUARIO PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:02:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E6BC62A1-5057-7C28-08F5-A0506783AC95</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

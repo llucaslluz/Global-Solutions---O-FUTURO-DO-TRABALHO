@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9754B09D-784E-2DAA-433C-55F3B36FFCE5" name="GS_CURSO">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>C78C5882-1953-522D-5D3B-5B9EE7ABBA9C</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_curso" id="4658BC4C-9AA9-35E1-4982-F3541134A169">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador do curso]]></commentInRDBMS>
+<generatorID>EE308CD1-16F1-5E23-84D7-F16528A1F4D6</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_nome" id="8952B998-CD2B-AC0A-E0DC-1C7A26A67236">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome do curso]]></commentInRDBMS>
+<generatorID>2E4BA067-8700-2EDE-5D6F-8B8E0155DD33</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_descricao" id="D2FF89DB-F89A-9C33-40AE-7D53FB11E52F">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descrição do curso]]></commentInRDBMS>
+<generatorID>14D9FAA1-D80C-79F2-BD64-0137F049A841</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vl_carga_horaria" id="7948716F-5B45-D9B3-418D-3459A08974B8">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Carga horária em horas]]></commentInRDBMS>
+<generatorID>D3BB9A8E-68FE-E3FE-B6B9-7E2EAA4EACD0</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_nivel" id="FCBE8E4A-8AF3-8D41-DA0C-D0DEB354A3EF">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Básico, intermediário, avançado]]></commentInRDBMS>
+<generatorID>81AB4F49-9BEF-72EF-D57E-FC986C5F23A9</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GS_ESCOLA_id_escola" id="3B1916C5-32B4-87B5-DDB5-519D7FB0A0DE">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>75B662F4-E417-DC5B-760E-2145D3877BE7</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="67A568C6-0DE9-1F25-47BA-0D952D22CE2D" referredColumn="25375051-2FFE-1BD2-9229-728C45FE84C1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B61BD4EA-E531-63A1-4AB0-FD080E646501" name="GS_CURSO_PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:20 UTC</createdTime>
+<generatorID>CD2D79CC-5820-53DA-EB50-518488D4CF86</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4658BC4C-9AA9-35E1-4982-F3541134A169"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4DFB68BA-2678-9B79-24E9-74B8933D6466" name="GS_CURSO_GS_ESCOLA_FK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:21 UTC</createdTime>
+<generatorID>37B199E3-7E03-D124-9207-6FC4685E5D19</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B1916C5-32B4-87B5-DDB5-519D7FB0A0DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

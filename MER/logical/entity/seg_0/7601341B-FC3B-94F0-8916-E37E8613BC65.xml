@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7601341B-FC3B-94F0-8916-E37E8613BC65" name="GS_TRILHA_ITEM">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:37:57 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_item" id="A16B8910-5D85-41FA-1794-FFF84D20C0A7">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:38:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID do curso/vaga/habilidade/objetivo conforme tipo_item]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_tipo_item" id="34651D3D-56A3-1BE9-4E16-E73575005AB2">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:38:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[CURSO, VAGA, HABILIDADE, OBJETIVO]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_ordem" id="63E0E6AB-F51F-DCBD-D840-2F3DA560560C">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:38:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ordem de apresentação da trilha]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_trilha" id="0FB0F1AE-B9D5-AE42-9EEE-C4BD2F9D2F47">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:09:25 UTC</createdTime>
+<generatorID>5C91A36A-B17C-38D7-6538-D166E501D8DF</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>6B5F0734-E85B-828E-32D4-08A5C8ECBA9D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="09FF447D-91F2-7D0D-8E9A-C3BDE33C9428" name="GS_TRILHA_ITEM PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 22:39:02 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A16B8910-5D85-41FA-1794-FFF84D20C0A7</attributeRef>
+<attributeRef>34651D3D-56A3-1BE9-4E16-E73575005AB2</attributeRef>
+<attributeRef>0FB0F1AE-B9D5-AE42-9EEE-C4BD2F9D2F47</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

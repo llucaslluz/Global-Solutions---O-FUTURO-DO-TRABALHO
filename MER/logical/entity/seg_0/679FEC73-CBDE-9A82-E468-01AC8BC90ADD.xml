@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="679FEC73-CBDE-9A82-E468-01AC8BC90ADD" name="GS_PESSOA_PERFIL">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 21:39:24 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pessoa" id="4366D642-34F8-EFDC-A8C9-E08F208433AE">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 21:39:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Mesmo id do USUARIO (relação 1:1)]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_fase_carreira" id="E94E4396-1A33-0573-5914-64C2F801339E">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 21:39:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[PRIMEIRO_EMP, TRANSICAO, PROMOCAO etc.]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_objetivo_geral" id="98771D84-2F3A-1382-21C8-CA72408023B9">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 21:39:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[Objetivo principal resumido]]></commentInRDBMS>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_resumo_perfil" id="60319D5B-D097-AC7D-1529-7E78C4C2E53A">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 21:39:51 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="86B8D6FF-FD27-AACF-DCE5-C65DC99D1977">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 21:42:49 UTC</createdTime>
+<generatorID>DFF511BE-709B-2F19-A5B9-7AEA10FF9000</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<referedAttribute>2EDC6634-A9FD-F192-DA82-8C836AD63060</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="33A40E50-6BE6-0C7B-4152-D5E2413DB683" name="GS_PESSOA_PERFIL PK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 21:40:20 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="234263AA-E5C7-76FC-DB06-9F9C163D83EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4366D642-34F8-EFDC-A8C9-E08F208433AE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

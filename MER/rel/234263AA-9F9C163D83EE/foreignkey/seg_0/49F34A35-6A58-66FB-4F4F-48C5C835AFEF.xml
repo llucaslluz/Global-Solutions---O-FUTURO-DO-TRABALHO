@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="49F34A35-6A58-66FB-4F4F-48C5C835AFEF" containerWithKeyObject="7DBEEA07-E2DC-AC87-4DD2-DC05185C65E9" localFKIndex="65A583EC-B463-07B5-B039-9D274C5F1BEF" name="GS_HISTORICO_MATRIZ_USUARIO_GS_ITEM_MATRIZ_HABILIDADE_FK">
+<createdBy>lluca</createdBy>
+<createdTime>2025-11-14 23:28:21 UTC</createdTime>
+<generatorID>45BD4C2E-C17B-F3F0-AE04-1C8FD689AD1B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>GS_ITEM_MATRIZ_HABILIDADE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C1AB135E-23FE-97C5-A6D7-C07935EEDAEA</referredTableID>
+<keyObject>0366C20D-9098-7D08-EFA5-FAF4AD2DC00B</keyObject>
+<referredKeyID>0366C20D-9098-7D08-EFA5-FAF4AD2DC00B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>GS_MATRIZ_HABILIDADE_id_matriz,GS_HABILIDADE_id_habilidade</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
