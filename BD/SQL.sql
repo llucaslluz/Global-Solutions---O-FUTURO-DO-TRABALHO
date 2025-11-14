@@ -240,3 +240,6 @@ CREATE TABLE GS_FONTE_PERFIL_USUARIO (
     CONSTRAINT fk_fonte_perfil_usuario
         FOREIGN KEY (id_usuario) REFERENCES GS_USUARIO (id_usuario)
 );
+git add .
+git commit -m " inclusao do SQL.sql"
+git push
