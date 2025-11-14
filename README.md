@@ -245,7 +245,7 @@ README.md
 ## 📝 Como rodar o projeto (MVP simples)
 
 ### 1) Clone o repositório:
-git clone https://github.com/llucaslluz/Global-Solutions---O-FUTURO-DO-TRABALHO/tree/db8581f8959cbe4c2560ff673890875c481caf34
+git clone https://github.com/llucaslluz/Global-Solutions---O-FUTURO-DO-TRABALHO.git
 
 
 ### 2) Acesse a pasta:
