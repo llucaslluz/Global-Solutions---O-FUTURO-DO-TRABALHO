@@ -240,24 +240,17 @@ services/
 schema.sql
 README.md
 
-yaml
-Copiar código
-
 ---
 
 ## 📝 Como rodar o projeto (MVP simples)
 
 ### 1) Clone o repositório:
-git clone https://github.com/SEU-USUARIO/d3
+git clone https://github.com/llucaslluz/Global-Solutions---O-FUTURO-DO-TRABALHO/tree/db8581f8959cbe4c2560ff673890875c481caf34
 
-shell
-Copiar código
 
 ### 2) Acesse a pasta:
 cd d3
 
-yaml
-Copiar código
 
 ### 3) Abra o frontend:
 Basta abrir o arquivo `index.html` no navegador.
