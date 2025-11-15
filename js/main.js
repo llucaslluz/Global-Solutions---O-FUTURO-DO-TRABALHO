@@ -59,7 +59,7 @@ function initHowCarousel() {
   // Medidas básicas
   const totalWidth = track.scrollWidth / 2; // largura do conjunto original
   let position = 0;
-  const speed = 0.3; // px por frame
+  const speed = 0.25; // px por frame
   let paused = false;
 
   // Pausa quando o mouse passa em cima (desktop)
