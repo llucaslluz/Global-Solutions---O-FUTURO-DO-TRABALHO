@@ -7,21 +7,24 @@
 
   <meta name="description" content="D³ é uma plataforma guiada por IA que conecta pessoas, empresas e instituições de ensino através de matrizes de habilidades, ajudando na tomada de decisões de carreira.">
 
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar__content">
       <div class="logo">
         <span class="logo__mark">D³</span>
-        <span class="logo__text">Decisões, Destinos e Desenvolvimento</span>
+        <div class="logo__group">
+          <span class="logo__text">Decisões Definem Destinos</span>
+          <span class="logo__tag">MVP • Global Solution 2025</span>
+        </div>
       </div>
 
       <nav class="nav">
         <a href="#como-funciona">Como funciona</a>
         <a href="#perfis">Perfis</a>
         <a href="#ia">IA</a>
-        <a href="#contato">Começar</a>
+        <a href="#contato" class="nav__cta">Começar</a>
       </nav>
     </div>
   </header>
@@ -31,6 +34,7 @@
     <section class="hero">
       <div class="container hero__content">
         <div class="hero__text">
+          <span class="hero__badge">Plataforma guiada por IA</span>
           <h1>Transforme decisões em <span class="highlight">destinos</span>.</h1>
           <p>
             O <strong>D³</strong> conecta você, empresas e instituições de ensino
@@ -71,7 +75,7 @@
               </div>
             </div>
             <div class="matrix-row">
-              <span>Inovação & IA</span>
+              <span>Inovação &amp; IA</span>
               <div class="bar">
                 <div class="bar__fill bar__fill--4"></div>
               </div>
@@ -86,47 +90,121 @@
     </section>
 
     <!-- COMO FUNCIONA -->
-    <section id="como-funciona" class="section">
-      <div class="container">
-        <h2>Como o D³ funciona</h2>
-        <p class="section__subtitle">
-          Do currículo às decisões: o D³ usa matrizes de habilidades e IA para
-          transformar dados em planos reais de evolução.
-        </p>
+<section id="como-funciona" class="section section--how">
+  <div class="container">
+    <h2 class="section__title">Como o D³ funciona</h2>
+    <p class="section__subtitle">
+      O D³ organiza o futuro do trabalho em módulos: usuário, escolas, empresas,
+      comparações inteligentes, trilhas de evolução e tendências de mercado.
+    </p>
 
-        <div class="grid grid--3">
-          <article class="card">
-            <h3>1. Perfil & Matriz</h3>
-            <p>
-              O usuário cadastra suas experiências ou currículo e o D³ gera
-              automaticamente uma matriz de habilidades técnicas e
-              comportamentais.
-            </p>
-          </article>
+    <div class="how-carousel">
+      <div class="how-carousel__track">
+        <!-- Módulo 1 -->
+        <article class="card how-card">
+          <span class="how-card__tag">Módulo 1</span>
+          <h3>Perfil do Usuário</h3>
+          <p class="how-card__resume">
+            Matriz individual de habilidades, a partir do que a pessoa já viveu.
+          </p>
+          <ul>
+            <li>Importação de currículo</li>
+            <li>Extração automática de habilidades</li>
+            <li>Análise comportamental</li>
+            <li>Geração da matriz atual</li>
+            <li>Simulação de evolução</li>
+          </ul>
+        </article>
 
-          <article class="card">
-            <h3>2. Conexão com cursos & vagas</h3>
-            <p>
-              Escolas e empresas cadastram suas trilhas e funções em formato de
-              matrizes. O D³ compara tudo com o perfil do usuário.
-            </p>
-          </article>
+        <!-- Módulo 2 -->
+        <article class="card how-card">
+          <span class="how-card__tag">Módulo 2</span>
+          <h3>Escolas &amp; Instituições</h3>
+          <p class="how-card__resume">
+            Cursos descritos como conjuntos de habilidades, não só disciplinas.
+          </p>
+          <ul>
+            <li>Cadastro de cursos e trilhas</li>
+            <li>Matriz curricular por habilidade</li>
+            <li>Curso → carreira (impacto real)</li>
+            <li>Exibição das habilidades entregues</li>
+          </ul>
+        </article>
 
-          <article class="card">
-            <h3>3. Trilhas e próximos passos</h3>
-            <p>
-              A IA sugere caminhos de evolução, cursos, reskilling, promoções
-              possíveis e áreas emergentes alinhadas ao perfil.
-            </p>
-          </article>
-        </div>
+        <!-- Módulo 3 -->
+        <article class="card how-card">
+          <span class="how-card__tag">Módulo 3</span>
+          <h3>Empresas &amp; Mercado</h3>
+          <p class="how-card__resume">
+            Vagas, cargos e funções internas em formato de matriz de competências.
+          </p>
+          <ul>
+            <li>Cadastro de cargos e vagas</li>
+            <li>Matriz de habilidades por função</li>
+            <li>Caminhos de promoção</li>
+            <li>Predição de áreas em crescimento</li>
+          </ul>
+        </article>
+
+        <!-- Módulo 4 -->
+        <article class="card how-card">
+          <span class="how-card__tag">Módulo 4</span>
+          <h3>Comparador Inteligente</h3>
+          <p class="how-card__resume">
+            A cola entre pessoas, cursos e vagas, usando uma linguagem comum.
+          </p>
+          <ul>
+            <li>Usuário × Curso (aprendizado)</li>
+            <li>Usuário × Vaga (gaps atuais)</li>
+            <li>Usuário × Futuro da profissão</li>
+            <li>Sugestão de prioridades</li>
+          </ul>
+        </article>
+
+        <!-- Módulo 5 -->
+        <article class="card how-card">
+          <span class="how-card__tag">Módulo 5</span>
+          <h3>Trilhas de Evolução</h3>
+          <p class="how-card__resume">
+            A IA transforma os gaps em um mapa de próximos passos.
+          </p>
+          <ul>
+            <li>Recomendação de cursos e trilhas</li>
+            <li>Certificações e projetos práticos</li>
+            <li>Treinamentos internos</li>
+            <li>Caminhos de carreira possíveis</li>
+          </ul>
+        </article>
+
+        <!-- Módulo 6 -->
+        <article class="card how-card">
+          <span class="how-card__tag">Módulo 6</span>
+          <h3>Tendências &amp; Mercado</h3>
+          <p class="how-card__resume">
+            O radar do D³ para não deixar o usuário e a empresa para trás.
+          </p>
+          <ul>
+            <li>Habilidades em alta</li>
+            <li>Profissões surgindo &amp; em declínio</li>
+            <li>Impacto da tecnologia no time</li>
+            <li>Áreas que devem crescer</li>
+          </ul>
+        </article>
       </div>
-    </section>
+    </div>
+
+    <p class="how-carousel__hint">
+      Carrossel demonstrativo. Passe o mouse para pausar o movimento.
+    </p>
+  </div>
+</section>
+
+
 
     <!-- PERFIS -->
     <section id="perfis" class="section section--alt">
       <div class="container">
-        <h2>Quem se beneficia com o D³?</h2>
+        <h2 class="section__title">Quem se beneficia com o D³?</h2>
 
         <div class="grid grid--3">
           <article class="card card--outlined">
@@ -156,7 +234,7 @@
           </article>
 
           <article class="card card--outlined">
-            <h3>Empresas & mercado</h3>
+            <h3>Empresas &amp; mercado</h3>
             <p>
               Organizações que desejam mapear talentos internos e planejar o
               futuro da força de trabalho.
@@ -174,7 +252,7 @@
     <!-- IA -->
     <section id="ia" class="section">
       <div class="container">
-        <h2>IA como bússola de carreira</h2>
+        <h2 class="section__title">IA como bússola de carreira</h2>
         <p class="section__subtitle">
           A Inteligência Artificial do D³ não substitui pessoas. Ela organiza
           dados e tendências para orientar decisões com mais segurança.
@@ -212,7 +290,7 @@
     <section id="contato" class="section section--cta">
       <div class="container section--cta__content">
         <div>
-          <h2>Próximos passos do projeto</h2>
+          <h2 class="section__title section__title--light">Próximos passos do projeto</h2>
           <p>
             Esta é a versão inicial (MVP conceitual) do D³, criada para a
             Global Solution FIAP 2025. O próximo passo é evoluir do protótipo
@@ -243,6 +321,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
