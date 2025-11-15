@@ -92,9 +92,11 @@ p {
 
 .highlight {
   background: linear-gradient(120deg, #a855f7, #6366f1, #22c55e);
-  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-background-clip: text; /* necessário para Chrome/Safari */
   color: transparent;
 }
+
 
 /* GRID */
 
