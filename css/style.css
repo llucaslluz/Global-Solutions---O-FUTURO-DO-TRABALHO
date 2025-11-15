@@ -523,6 +523,40 @@ p {
   overflow: hidden;
   position: relative;
 }
+/* Degradê suave integrado ao fundo */
+.how-carousel::before,
+.how-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;                 /* pode ajustar */
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Lado esquerdo */
+.how-carousel::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--bg) 0%,
+    var(--bg-alt) 30%,
+    transparent 100%
+  );
+}
+
+/* Lado direito */
+.how-carousel::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--bg) 0%,
+    var(--bg-alt) 30%,
+    transparent 100%
+  );
+}
+
 
 .how-carousel__track {
   display: flex;

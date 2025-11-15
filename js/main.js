@@ -77,9 +77,10 @@ function initHowCarousel() {
       position -= speed;
 
       // Quando passamos da largura do conjunto original, reseta para 0
-      if (-position >= totalWidth) {
-        position = 0;
-      }
+if (-position >= totalWidth) {
+  position += totalWidth; // reaproveita o movimento em vez de resetar seco
+}
+
 
       track.style.transform = `translateX(${position}px)`;
     }
