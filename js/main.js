@@ -5,13 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnVerMatriz = document.getElementById("btnVerMatriz");
   const topbar = document.querySelector(".topbar");
 
-  if (btnFakeLogin) {
-    btnFakeLogin.addEventListener("click", () => {
-      alert(
-        "No futuro, este botão abrirá a área do usuário com a matriz de habilidades.\n\nPor enquanto, este é só um protótipo estático para a Global Solution. 🙂"
-      );
-    });
-  }
+if (btnFakeLogin) {
+  btnFakeLogin.addEventListener("click", () => {
+    alert(
+      "No futuro, este botão abrirá a área do usuário com a matriz de habilidades.\n\nPor enquanto, esta é uma versão de demonstração da interface do D³. 🙂"
+    );
+  });
+}
+
 
   if (btnVerMatriz) {
     btnVerMatriz.addEventListener("click", () => {
