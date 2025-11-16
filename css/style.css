@@ -418,6 +418,112 @@ p {
   justify-content: space-between;
 }
 
+/* CTA – versão com passos e porcentagens */
+
+.section--cta__content--split {
+  align-items: stretch;
+}
+
+.section--cta__copy {
+  flex: 1 1 260px;
+  max-width: 520px;
+}
+
+.section--cta__side {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* bloco de progresso */
+
+.cta-progress {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.cta-step + .cta-step {
+  margin-top: 0.7rem;
+}
+
+.cta-step__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.cta-step__label {
+  color: var(--text-main);
+}
+
+.cta-step__value {
+  color: #c7d2fe;
+  font-weight: 500;
+}
+
+.cta-step__bar {
+  width: 100%;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: #020617;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  overflow: hidden;
+}
+
+.cta-step__fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #6366f1, #22c55e);
+  transform-origin: left;
+}
+
+/* “larguras” das barras (fixas, só visual) */
+.cta-step__fill--1 { width: 35%; }
+.cta-step__fill--2 { width: 70%; }
+.cta-step__fill--3 { width: 100%; }
+
+/* botões lado a lado nessa seção */
+
+.section--cta__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+/* quando tiver a classe --row, força ficar lado a lado */
+.section--cta__actions.section--cta__actions--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+
+
+/* responsivo */
+
+@media (max-width: 860px) {
+  .section--cta__content--split {
+    flex-direction: column;
+  }
+
+  .section--cta__side {
+    width: 100%;
+  }
+
+  .section--cta__actions--row {
+    justify-content: flex-start;
+  }
+}
+
+
 .section--cta__actions {
   display: flex;
   flex-direction: column;
@@ -466,6 +572,39 @@ p {
 .btn--ghost:hover {
   background: rgba(30, 64, 175, 0.4);
 }
+
+/* Botões com efeito de "progresso" ao passar o mouse */
+.btn--progress {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Barra que cresce de 0% até 100% */
+.btn--progress::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #6366f1, #22c55e);
+  transform-origin: left;
+  transform: scaleX(0);
+  opacity: 0.2;              /* deixa o texto visível */
+  transition: transform 0.5s ease-out;
+  pointer-events: none;      /* não bloqueia o clique */
+  z-index: 0;
+}
+
+/* garante que o texto fique por cima da barra */
+.btn--progress {
+  z-index: 1;
+}
+
+/* Quando o mouse passa em cima, a barra "carrega" */
+.btn--progress:hover::before,
+.btn--progress:focus-visible::before {
+  transform: scaleX(1);
+}
+
 
 /* FOOTER */
 
