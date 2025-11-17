@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Login</title>
+
+  <meta name="description" content="Acesse sua conta no D³ para continuar explorando trilhas, cursos e oportunidades.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/auth.css" />
+</head>
+<body class="auth-page">
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Decisões Definem Destinos</span>
+          <span class="logo__tag">Tecnologia e propósito unidos para moldar o futuro do trabalho.</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html#como-funciona">Como funciona</a>
+        <a href="index.html#perfis">Perfis</a>
+        <a href="index.html#ia">IA</a>
+        <a href="cadastro.html" class="nav__cta">Criar conta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <h1 class="auth-title">Fazer login</h1>
+      <p class="auth-subtitle">
+        Acesse sua conta para continuar construindo a sua matriz de habilidades,
+        acompanhando cursos, trilhas e oportunidades dentro do D³.
+      </p>
+
+      <form id="loginForm" class="auth-form" novalidate>
+        <div class="auth-field">
+          <label for="loginEmail" class="auth-label">E-mail</label>
+          <input
+            id="loginEmail"
+            type="email"
+            class="auth-input"
+            placeholder="seunome@exemplo.com"
+            required
+          />
+        </div>
+
+        <div class="auth-field">
+          <label for="loginPassword" class="auth-label">Senha</label>
+          <input
+            id="loginPassword"
+            type="password"
+            class="auth-input"
+            placeholder="Sua senha"
+            required
+          />
+        </div>
+
+        <p id="loginMessage" class="auth-message"></p>
+
+        <div class="auth-actions">
+          <button type="submit" class="btn btn--primary">
+            Entrar
+          </button>
+          <button
+            type="button"
+            class="btn btn--ghost"
+            onclick="location.href='cadastro.html'"
+          >
+            Criar nova conta
+          </button>
+        </div>
+
+        <p class="auth-secondary">
+          Dica para testes rápidos: use <strong>ana@exemplo.com</strong> ou
+          <strong>lucas@exemplo.com</strong> com senha <strong>123456</strong>.
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>Inspirado em desafios acadêmicos da FIAP</span>
+      <span>Desenvolvido por Lucas da Luz Morais</span>
+    </div>
+  </footer>
+
+  <script src="./js/db.js"></script>
+  <script src="./js/pages/login.js"></script>
+</body>
+</html>

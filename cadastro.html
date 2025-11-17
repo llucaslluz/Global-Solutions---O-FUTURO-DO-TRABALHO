@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Criar conta</title>
+
+  <meta name="description" content="Crie sua conta no D³ e comece a mapear habilidades, cursos e oportunidades de carreira.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+  <!-- estilos globais + estilos de autenticação -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/auth.css" />
+</head>
+<body class="auth-page">
+  <!-- Topbar reaproveitando o estilo global -->
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Decisões Definem Destinos</span>
+          <span class="logo__tag">Tecnologia e propósito unidos para moldar o futuro do trabalho.</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html#como-funciona">Como funciona</a>
+        <a href="index.html#perfis">Perfis</a>
+        <a href="index.html#ia">IA</a>
+        <a href="login.html" class="nav__cta">Fazer login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <h1 class="auth-title">Criar conta</h1>
+      <p class="auth-subtitle">
+        Escolha o tipo de conta, preencha seus dados e comece a organizar suas habilidades,
+        cursos e oportunidades dentro do D³.
+      </p>
+
+      <div class="auth-tabs" id="accountTypeTabs">
+        <button type="button" class="auth-tab auth-tab--active" data-role="user">
+          Usuário
+        </button>
+        <button type="button" class="auth-tab" data-role="school">
+          Escola / Instituição
+        </button>
+        <button type="button" class="auth-tab" data-role="company">
+          Empresa
+        </button>
+      </div>
+
+      <form id="signupForm" class="auth-form" novalidate>
+        <input type="hidden" id="roleInput" value="user" />
+
+        <div class="auth-field">
+          <label for="name" class="auth-label">Nome completo</label>
+          <input
+            id="name"
+            type="text"
+            class="auth-input"
+            placeholder="Como quer ser chamado(a) no D³"
+            required
+          />
+        </div>
+
+        <div class="auth-field">
+          <label for="email" class="auth-label">E-mail</label>
+          <input
+            id="email"
+            type="email"
+            class="auth-input"
+            placeholder="seunome@exemplo.com"
+            required
+          />
+        </div>
+
+        <div class="auth-field">
+          <label for="password" class="auth-label">Senha</label>
+          <input
+            id="password"
+            type="password"
+            class="auth-input"
+            placeholder="Mínimo de 6 caracteres"
+            required
+          />
+        </div>
+
+        <div class="auth-field">
+          <label for="confirmPassword" class="auth-label">Confirmar senha</label>
+          <input
+            id="confirmPassword"
+            type="password"
+            class="auth-input"
+            placeholder="Repita a senha"
+            required
+          />
+        </div>
+
+        <p id="signupMessage" class="auth-message"></p>
+
+        <div class="auth-actions">
+          <button type="submit" class="btn btn--primary">
+            Criar conta
+          </button>
+          <button
+            type="button"
+            class="btn btn--ghost"
+            onclick="location.href='login.html'"
+          >
+            Já tenho uma conta
+          </button>
+        </div>
+
+        <p class="auth-secondary">
+          Ao criar a conta você poderá, futuramente, conectar trilhas de estudos,
+          vagas e matrizes de habilidades em um único lugar.
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>Inspirado em desafios acadêmicos da FIAP</span>
+      <span>Desenvolvido por Lucas da Luz Morais</span>
+    </div>
+  </footer>
+
+  <script src="./js/db.js"></script>
+  <script src="./js/pages/cadastro.js"></script>
+</body>
+</html>

@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnVerMatriz = document.getElementById("btnVerMatriz");
   const topbar = document.querySelector(".topbar");
 
+if (window.d3db) {
+  window.d3db.seedDbIfEmpty();
+}
+
 if (btnFakeLogin) {
   btnFakeLogin.addEventListener("click", () => {
     alert(
