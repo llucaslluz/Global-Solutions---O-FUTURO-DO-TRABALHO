@@ -39,8 +39,64 @@ if (btnFakeLogin) {
   // Carrossel "Como funciona" – loop infinito sem pulo
   initHowCarousel();
 
+    // 🔥 NOVO – anima as barras da área “Comece a sua jornada agora”
+  initCtaHoverBars();
+
   console.log("D³ – Projeto inicial carregado. Vamos evoluir isso juntos. 🚀");
 });
+
+
+function initCtaHoverBars() {
+  const ctaSection = document.querySelector("#cta");
+  if (!ctaSection) return;
+
+  const fills  = Array.from(ctaSection.querySelectorAll(".cta-step__fill"));
+  const values = Array.from(ctaSection.querySelectorAll(".cta-step__value"));
+
+  // estados que queremos para cada interação
+  const states = {
+    base:   [0, 0, 0],       // estado neutro (sem interação)
+    create: [35, 70, 50],   // hover em "Criar conta"
+    login:  [100, 90, 95], // hover em "Fazer login"
+  };
+
+  function applyState(name) {
+    const arr = states[name];
+    if (!arr) return;
+
+    arr.forEach((pct, index) => {
+      if (fills[index]) {
+        fills[index].style.width = pct + "%";
+      }
+      if (values[index]) {
+        values[index].textContent = pct + "%";
+      }
+    });
+  }
+
+  // estado inicial: tudo zerado
+  applyState("base");
+
+  const btnCreate = ctaSection.querySelector("[data-cta-state='create']");
+  const btnLogin  = ctaSection.querySelector("[data-cta-state='login']");
+  const actions   = ctaSection.querySelector(".section--cta__actions");
+
+  if (btnCreate) {
+    btnCreate.addEventListener("mouseenter", () => applyState("create"));
+    btnCreate.addEventListener("focus",      () => applyState("create"));
+  }
+
+  if (btnLogin) {
+    btnLogin.addEventListener("mouseenter", () => applyState("login"));
+    btnLogin.addEventListener("focus",      () => applyState("login"));
+  }
+
+  // quando sai da área dos botões, volta para o neutro (0/0/0)
+  if (actions) {
+    actions.addEventListener("mouseleave", () => applyState("base"));
+  }
+}
+
 
 function initHowCarousel() {
   const track = document.querySelector(".how-carousel__track");
@@ -97,3 +153,4 @@ if (-position >= totalWidth) {
 
   requestAnimationFrame(step);
 }
+
