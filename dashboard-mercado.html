@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Dashboard Mercado</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dashboard-mercado.css" />
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Decisões Definem Destinos</span>
+          <span class="logo__tag">Empresa</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="mercado-vagas.html">Vagas</a>
+        <a href="mercado-detalhe-vaga.html">Cadastrar vaga</a>
+        <a href="#" data-logout class="nav__cta">Sair</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <div class="container">
+
+      <h1>Bem-vindo(a), <span data-user-name></span></h1>
+      <p class="subtitle">Gerencie vagas, habilidades e relação com candidatos.</p>
+
+      <div class="grid grid--3 dashboard-cards">
+
+        <div class="card">
+          <h3>Vagas abertas</h3>
+          <p>Visualize e edite as vagas cadastradas pela sua empresa.</p>
+          <button onclick="location.href='mercado-vagas.html'" class="btn btn--primary">Ver vagas</button>
+        </div>
+
+        <div class="card">
+          <h3>Novo cadastro de vaga</h3>
+          <p>Defina habilidades e requisitos alinhados às tendências do mercado.</p>
+          <button onclick="location.href='mercado-detalhe-vaga.html'" class="btn btn--primary">Cadastrar</button>
+        </div>
+
+        <div class="card">
+          <h3>Análise de talentos</h3>
+          <p>Acompanhe perfis compatíveis com as vagas abertas.</p>
+          <button class="btn btn--primary">Analisar talentos</button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>D³ – Mercado</span>
+      <span>by Lucas da Luz Morais</span>
+    </div>
+  </footer>
+
+  <script src="./js/db.js"></script>
+  <script src="./js/pages/dashboard-mercado.js"></script>
+</body>
+</html>

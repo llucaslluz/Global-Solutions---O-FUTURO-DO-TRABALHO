@@ -1,106 +1,123 @@
 // js/db.js
-// "Banco" simples do D³ usando localStorage
+// Banco fake em localStorage + controle de usuário logado
 
-const D3_DB_KEY = 'd3_database_v1';
-const D3_CURRENT_USER_KEY = 'd3_current_user';
+(function () {
+  const STORAGE_KEY = 'd3_db_v1';
+  const CURRENT_USER_KEY = 'd3_current_user_v1';
 
-function getDb() {
-  const raw = localStorage.getItem(D3_DB_KEY);
-  if (!raw) {
-    return {
-      users: [],
-      schools: [],
-      companies: []
-    };
+  function loadDb() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch (e) {
+      console.error('Erro ao carregar DB fake:', e);
+      return null;
+    }
   }
 
-  try {
-    return JSON.parse(raw);
-  } catch (e) {
-    console.error('Erro ao ler DB do localStorage:', e);
-    return {
-      users: [],
-      schools: [],
-      companies: []
-    };
+  function saveDb(db) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(db));
+    } catch (e) {
+      console.error('Erro ao salvar DB fake:', e);
+    }
   }
-}
 
-function saveDb(db) {
-  localStorage.setItem(D3_DB_KEY, JSON.stringify(db));
-}
+  // popula com alguns dados iniciais, se estiver vazio
+  function seedDbIfEmpty() {
+    let db = loadDb();
+    if (db) return;
 
-// cria dados iniciais se ainda não existir nada
-function seedDbIfEmpty() {
-  const raw = localStorage.getItem(D3_DB_KEY);
-  if (raw) return;
+    db = {
+      users: [
+        {
+          id: 'u1',
+          type: 'user',                // usuário pessoa física
+          name: 'Ana Usuária',
+          email: 'ana@exemplo.com',
+          password: '123456'
+        },
+        {
+          id: 'u2',
+          type: 'user',
+          name: 'Lucas Usuário',
+          email: 'lucas@exemplo.com',
+          password: '123456'
+        },
+        {
+          id: 'e1',
+          type: 'school',              // escola
+          name: 'Escola Tech Futuro',
+          email: 'contato@techfuturo.com',
+          password: '123456'
+        },
+        {
+          id: 'c1',
+          type: 'company',             // empresa
+          name: 'Empresa IA Talentos',
+          email: 'rh@iatalentos.com',
+          password: '123456'
+        }
+      ],
+      // aqui depois dá pra crescer com cursos, vagas etc.
+      createdAt: new Date().toISOString()
+    };
 
-  const db = {
-    users: [
-      {
-        id: 1,
-        name: 'Ana Silva',
-        email: 'ana@exemplo.com',
-        password: '123456',
-        role: 'user'
-      },
-      {
-        id: 2,
-        name: 'Lucas Morais',
-        email: 'lucas@exemplo.com',
-        password: '123456',
-        role: 'user'
-      }
-    ],
-    schools: [
-      { id: 1, name: 'FIAP', area: 'Tecnologia', city: 'São Paulo' },
-      { id: 2, name: 'Escola Tech Future', area: 'TI & Dados', city: 'Online' },
-      { id: 3, name: 'Instituto Profissões do Amanhã', area: 'Carreiras Digitais', city: 'São Paulo' }
-    ],
-    companies: [
-      { id: 1, name: 'TechCorp IA', sector: 'Tecnologia', size: 'Grande' },
-      { id: 2, name: 'EduLab', sector: 'EdTech', size: 'Média' },
-      { id: 3, name: 'FutureWorks', sector: 'Consultoria de Futuro do Trabalho', size: 'Pequena' }
-    ]
-  };
+    saveDb(db);
+  }
 
-  saveDb(db);
-  console.log('DB inicial do D³ criado no localStorage.');
-}
+  function getDb() {
+    let db = loadDb();
+    if (!db) {
+      seedDbIfEmpty();
+      db = loadDb();
+    }
+    return db;
+  }
 
-// helpers para usuário logado
-function setCurrentUser(user) {
-  localStorage.setItem(
-    D3_CURRENT_USER_KEY,
-    JSON.stringify({
+  function setDb(db) {
+    saveDb(db);
+  }
+
+  // ---- usuário logado ----
+
+  function setCurrentUser(user) {
+    if (!user) {
+      localStorage.removeItem(CURRENT_USER_KEY);
+      return;
+    }
+    const slim = {
       id: user.id,
       name: user.name,
       email: user.email,
-      role: user.role
-    })
-  );
-}
-
-function getCurrentUser() {
-  const raw = localStorage.getItem(D3_CURRENT_USER_KEY);
-  if (!raw) return null;
-  try {
-    return JSON.parse(raw);
-  } catch {
-    return null;
+      type: user.type   // 'user' | 'school' | 'company'
+    };
+    localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(slim));
   }
-}
 
-function clearCurrentUser() {
-  localStorage.removeItem(D3_CURRENT_USER_KEY);
-}
+  function getCurrentUser() {
+    try {
+      const raw = localStorage.getItem(CURRENT_USER_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch (e) {
+      console.error('Erro ao ler usuário logado:', e);
+      return null;
+    }
+  }
 
-// expõe tudo em window para outros scripts
-window.d3db = {
-  getDb,
-  saveDb,
-  seedDbIfEmpty,
-  setCurrentUser,
-  getCurrentUser,
-  clearCurrentUser
-};
+  function clearCurrentUser() {
+    localStorage.removeItem(CURRENT_USER_KEY);
+  }
+
+  // expõe no window
+  window.d3db = {
+    seedDbIfEmpty,
+    getDb,
+    setDb,
+    setCurrentUser,
+    getCurrentUser,
+    clearCurrentUser
+  };
+})();

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Dashboard Escola</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dashboard-escola.css" />
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Decisões Definem Destinos</span>
+          <span class="logo__tag">Instituição de Ensino</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="escola-cursos.html">Cursos</a>
+        <a href="escola-detalhe-curso.html">Detalhes</a>
+        <a href="#" data-logout class="nav__cta">Sair</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <div class="container">
+
+      <h1>Bem-vindo(a), <span data-user-name></span></h1>
+      <p class="subtitle">Gerencie cursos, trilhas e impacto de ensino no D³.</p>
+
+      <div class="grid grid--3 dashboard-cards">
+
+        <div class="card">
+          <h3>Meus cursos</h3>
+          <p>Gerencie todos os cursos cadastrados pela sua instituição.</p>
+          <button onclick="location.href='escola-cursos.html'" class="btn btn--primary">Ver cursos</button>
+        </div>
+
+        <div class="card">
+          <h3>Adicionar novo curso</h3>
+          <p>Cadastre cursos definindo habilidades e impacto profissional.</p>
+          <button onclick="location.href='escola-detalhe-curso.html'" class="btn btn--primary">Cadastrar</button>
+        </div>
+
+        <div class="card">
+          <h3>Impacto no mercado</h3>
+          <p>Visualize como seus cursos alimentam profissões e carreiras.</p>
+          <button class="btn btn--primary">Ver métricas</button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>D³ – Instituições</span>
+      <span>by Lucas da Luz Morais</span>
+    </div>
+  </footer>
+
+  <script src="./js/db.js"></script>
+  <script src="./js/pages/dashboard-escola.js"></script>
+</body>
+</html>

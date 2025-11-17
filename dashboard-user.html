@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Minha Jornada</title>
+
+  <meta name="description" content="Painel do usuário no D³: matriz de habilidades, próximos passos e conexão com trilhas e oportunidades.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+  <!-- estilos globais + específicos do dashboard -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dashboard-user.css" />
+</head>
+<body data-page="dashboard-user">
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Minha jornada</span>
+          <span class="logo__tag">Decisões, dados e destinos</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="usuario-trilhas.html">Minhas trilhas</a>
+        <a href="usuario-oportunidades.html">Oportunidades</a>
+        <button class="nav__logout" id="btnLogout">Sair</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / CABEÇALHO DA JORNADA -->
+    <section class="section section--hero">
+      <div class="container hero__content">
+        <div class="hero__text">
+          <span class="hero__badge">Painel do usuário</span>
+          <h1>
+            Olá, <span class="highlight" data-user-name>Usuário</span> 👋
+          </h1>
+          <p>
+            Esta é a sua visão no <strong>D³</strong>. Aqui você acompanha sua
+            matriz de habilidades, vê onde está hoje e quais são os próximos
+            passos para chegar nas oportunidades que deseja.
+          </p>
+
+          <div class="hero__tags">
+            <span class="hero__tag" data-user-role>Perfil: —</span>
+            <span class="hero__tag">Foco: evolução contínua</span>
+          </div>
+
+          <div class="hero__quick-actions">
+            <button class="btn btn--primary" onclick="location.href='usuario-trilhas.html'">
+              Ver minhas trilhas
+            </button>
+            <button class="btn btn--ghost" onclick="location.href='usuario-oportunidades.html'">
+              Ver oportunidades
+            </button>
+          </div>
+        </div>
+
+        <!-- CARTÃO RESUMO / MINI MATRIZ -->
+        <div class="hero__summary-card">
+          <h2>Resumo rápido</h2>
+          <p class="summary__subtitle">
+            Seu nível atual em cada eixo da matriz do D³:
+          </p>
+
+          <div class="summary-matrix">
+            <div class="summary-row">
+              <span>Habilidades técnicas</span>
+              <div class="bar">
+                <div class="bar__fill" data-skill-bar="tech"></div>
+              </div>
+              <span class="summary-value" data-skill-value="tech">0%</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Comunicação</span>
+              <div class="bar">
+                <div class="bar__fill" data-skill-bar="comm"></div>
+              </div>
+              <span class="summary-value" data-skill-value="comm">0%</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Liderança</span>
+              <div class="bar">
+                <div class="bar__fill" data-skill-bar="lead"></div>
+              </div>
+              <span class="summary-value" data-skill-value="lead">0%</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Inovação &amp; IA</span>
+              <div class="bar">
+                <div class="bar__fill" data-skill-bar="ai"></div>
+              </div>
+              <span class="summary-value" data-skill-value="ai">0%</span>
+            </div>
+          </div>
+
+          <p class="summary__note">
+            Esses valores podem ser ajustados futuramente com base no seu
+            histórico real de experiências, cursos e avaliações. Nesta versão,
+            eles são preenchidos a partir dos dados básicos do seu perfil.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISÃO GERAL RÁPIDA -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Visão geral da sua conta</h2>
+        <p class="section__subtitle">
+          Um resumo dos principais blocos que o D³ vai conectar para ajudar nas suas decisões:
+          trilhas de estudo, oportunidades e comparação com o mercado.
+        </p>
+
+        <div class="grid grid--3 dashboard-overview">
+          <article class="card">
+            <span class="card__badge">Trilhas</span>
+            <h3>Trilhas de desenvolvimento</h3>
+            <p>
+              Caminhos organizados por habilidades, com cursos e experiências para reduzir seus gaps.
+            </p>
+            <ul class="list">
+              <li>Organizadas por área de interesse</li>
+              <li>Conexão com instituições de ensino</li>
+              <li>Relacionadas às vagas que você busca</li>
+            </ul>
+            <button class="btn btn--ghost card__btn" onclick="location.href='usuario-trilhas.html'">
+              Acessar trilhas
+            </button>
+          </article>
+
+          <article class="card">
+            <span class="card__badge">Oportunidades</span>
+            <h3>Vagas e possibilidades</h3>
+            <p>
+              Vagas e funções que combinam com o seu perfil e com o futuro do trabalho.
+            </p>
+            <ul class="list">
+              <li>Filtro por área, senioridade e tipo de carreira</li>
+              <li>Visualização de compatibilidade por habilidade</li>
+              <li>Conexão com empresas parceiras</li>
+            </ul>
+            <button class="btn btn--ghost card__btn" onclick="location.href='usuario-oportunidades.html'">
+              Ver oportunidades
+            </button>
+          </article>
+
+          <article class="card">
+            <span class="card__badge">Comparador</span>
+            <h3>Perfil × Vagas × Cursos</h3>
+            <p>
+              Use o comparador do D³ para enxergar, de forma visual, o quanto o seu perfil se aproxima
+              de uma vaga ou trilha específica.
+            </p>
+            <ul class="list">
+              <li>Comparar perfil × vaga</li>
+              <li>Ver gaps por habilidade</li>
+              <li>Receber sugestões de estudo</li>
+            </ul>
+            <button
+              class="btn btn--primary card__btn"
+              onclick="location.href='comparador.html'"
+            >
+              Ir para o comparador
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRÓXIMOS PASSOS -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Próximos passos sugeridos</h2>
+        <p class="section__subtitle">
+          Baseado no seu perfil atual, o D³ sugere alguns focos iniciais para você
+          transformar decisões em destinos concretos.
+        </p>
+
+        <div class="grid grid--3">
+          <!-- Card 1 -->
+          <article class="card">
+            <span class="card__badge">Passo 1</span>
+            <h3>Completar perfil</h3>
+            <p>
+              Adicione mais detalhes sobre sua experiência, interesses e objetivos.
+              Quanto mais contexto, melhores serão as recomendações.
+            </p>
+            <ul class="list">
+              <li>Área de interesse principal</li>
+              <li>Tempo de experiência</li>
+              <li>Objetivo (troca, promoção, recolocação)</li>
+            </ul>
+            <button class="btn btn--ghost card__btn" disabled>
+              Em breve
+            </button>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <span class="card__badge">Passo 2</span>
+            <h3>Explorar trilhas</h3>
+            <p>
+              Veja trilhas de cursos e formações que ajudam a reduzir os gaps
+              entre sua matriz atual e as carreiras que você deseja.
+            </p>
+            <ul class="list">
+              <li>Trilhas por área (tech, gestão, dados, etc.)</li>
+              <li>Conexão com instituições parceiras</li>
+              <li>Recomendações com base na sua matriz</li>
+            </ul>
+            <button class="btn btn--ghost card__btn" onclick="location.href='usuario-trilhas.html'">
+              Ver trilhas
+            </button>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <span class="card__badge">Passo 3</span>
+            <h3>Comparar com vagas</h3>
+            <p>
+              Use o comparador do D³ para enxergar claramente quais habilidades
+              já estão fortes e quais precisam de reforço para cada vaga.
+            </p>
+            <ul class="list">
+              <li>Comparar perfil × vaga</li>
+              <li>Visualizar gaps por habilidade</li>
+              <li>Ver recomendações de estudo</li>
+            </ul>
+            <button
+              class="btn btn--primary card__btn"
+              onclick="location.href='comparador.html'"
+            >
+              Ir para o comparador
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO FINAL -->
+    <section class="section section--alt">
+      <div class="container closing">
+        <div class="closing__copy">
+          <h2 class="section__title">Sua carreira como um mapa vivo</h2>
+          <p>
+            O objetivo do D³ é transformar sua carreira em um mapa vivo de
+            habilidades, oportunidades e decisões. Com o tempo, este painel será
+            alimentado por dados reais: cursos feitos, projetos, feedbacks e
+            experiências profissionais.
+          </p>
+          <p>
+            Nesta primeira versão, você já pode navegar pelo comparador, explorar
+            trilhas e visualizar como o D³ organiza o futuro do trabalho de forma
+            estruturada e guiada por dados.
+          </p>
+        </div>
+        <div class="closing__box">
+          <p class="closing__hint">
+            Dica: experimente o <strong>Comparador</strong> com diferentes
+            combinações de vagas e trilhas para entender, na prática, como os
+            gaps de habilidades aparecem e como o D³ sugere caminhos de evolução.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>D³ – Decisões, Dados e Destinos</span>
+      <span>Desenvolvido por Lucas da Luz Morais</span>
+    </div>
+  </footer>
+
+  <script src="./js/db.js"></script>
+  <script src="./js/pages/dashboard-user.js"></script>
+</body>
+</html>

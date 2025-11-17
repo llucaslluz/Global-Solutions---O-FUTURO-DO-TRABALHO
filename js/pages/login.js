@@ -1,4 +1,4 @@
-// js/login.js
+// js/pages/login.js
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.d3db) {
@@ -44,17 +44,26 @@ function initLoginPage() {
     showLoginSuccess('Login realizado com sucesso!');
 
     setTimeout(() => {
-      // Por enquanto volta para a home. Depois você pode mandar para um dashboard.
-      window.location.href = 'index.html';
+      let target = 'dashboard-user.html';
+
+      if (user.type === 'school') {
+        target = 'dashboard-escola.html';
+      } else if (user.type === 'company') {
+        target = 'dashboard-mercado.html';
+      }
+
+      window.location.href = target;
     }, 900);
   });
 
   function showLoginError(text) {
+    if (!messageEl) return;
     messageEl.textContent = text;
     messageEl.className = 'auth-message auth-message--error';
   }
 
   function showLoginSuccess(text) {
+    if (!messageEl) return;
     messageEl.textContent = text;
     messageEl.className = 'auth-message auth-message--success';
   }

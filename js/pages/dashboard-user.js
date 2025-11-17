@@ -1,4 +1,4 @@
-// js/pages/dashboard-mercado.js
+// js/pages/dashboard-user.js
 
 document.addEventListener('DOMContentLoaded', () => {
   if (!window.d3db) return;
@@ -7,22 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const current = window.d3db.getCurrentUser();
 
-  // só entra aqui se for empresa / mercado
-  if (!current || current.type !== 'company') {
+  // se não tiver logado ou não for "user", manda pro login
+  if (!current || current.type !== 'user') {
     window.location.href = 'login.html';
     return;
   }
 
+  // coloca nome do usuário na página
   const nameEl = document.querySelector('[data-user-name]');
   if (nameEl) {
     nameEl.textContent = current.name;
   }
 
+  // exemplo de mostrar tipo em algum lugar
   const roleEl = document.querySelector('[data-user-type]');
   if (roleEl) {
-    roleEl.textContent = 'Empresa / Mercado';
+    roleEl.textContent = 'Usuário';
   }
 
+  // botão de sair (se você quiser)
   const logoutBtn = document.querySelector('[data-logout]');
   if (logoutBtn) {
     logoutBtn.addEventListener('click', () => {
@@ -31,5 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  console.log('Dashboard MERCADO carregado para:', current);
+  console.log('Dashboard carregado para:', current);
 });
