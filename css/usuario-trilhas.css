@@ -1,0 +1,184 @@
+/* ==========================================
+   Página: Minhas trilhas (usuario-trilhas)
+   ========================================== */
+
+body[data-page="usuario-trilhas"] {
+  background:
+    radial-gradient(circle at top, #020617 0, #020617 55%, #000 100%),
+    radial-gradient(circle at bottom, #020617 0, #000 60%);
+  color: var(--text-main);
+}
+
+/* Topbar herdando o visual do restante do D³ */
+body[data-page="usuario-trilhas"] .topbar {
+  background: rgba(2, 6, 23, 0.96);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+/* Navegação */
+body[data-page="usuario-trilhas"] .nav__link {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: 0.15s ease-out;
+}
+
+body[data-page="usuario-trilhas"] .nav__link:hover {
+  color: #e5e7eb;
+  background: rgba(15, 23, 42, 0.8);
+}
+
+body[data-page="usuario-trilhas"] .nav__link--active {
+  color: #e5e7eb;
+  background: rgba(79, 70, 229, 0.25);
+  border: 1px solid rgba(129, 140, 248, 0.7);
+}
+
+/* Cabeçalho da página */
+body[data-page="usuario-trilhas"] .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+/* GRID DE TRILHAS */
+.trilhas-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Card base */
+.trilha-card {
+  padding: 1.4rem 1.3rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), #020617);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Badge de status no topo */
+.trilha-card .card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  margin-bottom: 0.25rem;
+}
+
+/* status cores */
+.trilha-card .badge--trilha {
+  border-color: rgba(59, 130, 246, 0.85);
+  background: rgba(37, 99, 235, 0.8);
+}
+
+.trilha-card .badge--upskilling {
+  border-color: rgba(34, 197, 94, 0.85);
+  background: rgba(22, 163, 74, 0.85);
+}
+
+.trilha-card .badge--soft {
+  border-color: rgba(234, 179, 8, 0.85);
+  background: rgba(202, 138, 4, 0.85);
+}
+
+/* Título e texto */
+.trilha-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.trilha-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Lista de detalhes (tipo, duração, nível...) */
+.trilha-card .list {
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.88rem;
+}
+
+/* PROGRESSO */
+.trilha-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  margin-top: .4rem;
+}
+
+.trilha-progress > span:first-child {
+  color: var(--text-muted);
+}
+
+/* barra de progresso da trilha */
+.trilha-card .progress {
+  flex: 1;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: #020617;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  position: relative;
+  overflow: visible; /* não cortar a % */
+}
+
+.trilha-card .progress__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+}
+
+.trilha-card .progress__value {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(10%, -50%);
+  font-size: 0.78rem;
+  color: #e5e7eb;
+}
+
+/* AÇÕES (botões) */
+.trilha-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.trilha-actions .btn {
+  width: auto;
+  padding-inline: 1.1rem;
+  white-space: nowrap;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  body[data-page="usuario-trilhas"] .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .trilha-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .trilha-actions .btn {
+    width: 100%;
+  }
+}

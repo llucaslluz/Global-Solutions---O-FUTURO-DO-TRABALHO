@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Comparador de jornada</title>
+
+  <meta name="description" content="Compare seu perfil com vagas e trilhas no D³ e visualize seus gaps de habilidades.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/usuario-pages.css" />
+<link rel="stylesheet" href="./css/comparador.css" />
+
+</head>
+<body data-page="comparador">
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Minha jornada</span>
+          <span class="logo__tag">Decisões, dados e destinos</span>
+        </div>
+      </div>
+
+<nav class="nav">
+  <a href="dashboard-user.html" class="nav__link">Painel</a>
+  <a href="usuario-perfil.html" class="nav__link">Meu perfil</a>
+  <a href="usuario-matriz.html" class="nav__link">Minha matriz</a>
+  <a href="usuario-trilhas.html" class="nav__link">Minhas trilhas</a>
+  <a href="usuario-oportunidades.html" class="nav__link">Oportunidades</a>
+  <a href="comparador.html" class="nav__link nav__link--active">Comparador</a>
+</nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <!-- Cabeçalho -->
+        <header class="page-header">
+          <div>
+            <h1 class="section__title">Comparador de jornada</h1>
+            <p class="section__subtitle">
+              Compare sua matriz de habilidades com uma vaga ou trilha específica e visualize, de forma clara,
+              os gaps que ainda precisam ser trabalhados.
+            </p>
+          </div>
+          <button class="btn btn--ghost" onclick="location.href='usuario-matriz.html'">
+            Ver minha matriz completa
+          </button>
+        </header>
+
+        <!-- Layout do comparador -->
+        <div class="comparador-layout">
+          <!-- Coluna esquerda: seleção -->
+          <div class="comparador-panel card">
+            <h2>1. Escolha o que comparar</h2>
+            <p class="comparador-text">
+              Nesta versão, usamos alguns exemplos fixos de vagas e trilhas apenas para ilustrar como o D³
+              faria o comparativo. Em um próximo passo, esses dados podem vir direto do banco.
+            </p>
+
+            <h3 class="comparador-subtitle">Vagas</h3>
+            <div class="comparador-list">
+              <button class="comparador-item comparador-item--active">
+                <span class="badge badge--company">Empresa</span>
+                <div class="comparador-item__body">
+                  <strong>Analista de Dados Júnior – Indústria</strong>
+                  <span>Foco em indicadores de produção e manutenção.</span>
+                </div>
+              </button>
+
+              <button class="comparador-item">
+                <span class="badge badge--company">Empresa</span>
+                <div class="comparador-item__body">
+                  <strong>Especialista em Manutenção 4.0</strong>
+                  <span>Integração de sensores, dados e IA em plantas industriais.</span>
+                </div>
+              </button>
+            </div>
+
+            <h3 class="comparador-subtitle">Trilhas</h3>
+            <div class="comparador-list">
+              <button class="comparador-item comparador-item--secondary">
+                <span class="badge badge--trilha">Requalificação</span>
+                <div class="comparador-item__body">
+                  <strong>Transição para área de Dados</strong>
+                  <span>Fundamentos de programação, SQL e dashboards.</span>
+                </div>
+              </button>
+
+              <button class="comparador-item comparador-item--secondary">
+                <span class="badge badge--trilha badge--upskilling">Upskilling</span>
+                <div class="comparador-item__body">
+                  <strong>Fundamentos de IA aplicada ao trabalho</strong>
+                  <span>Uso prático de IA generativa e automação no dia a dia.</span>
+                </div>
+              </button>
+            </div>
+
+            <p class="comparador-hint">
+              Dica: em uma versão real, você poderia escolher qualquer vaga ou trilha salva no seu painel
+              e o D³ recalcularia o comparativo automaticamente.
+            </p>
+          </div>
+
+          <!-- Coluna direita: resultado do comparador -->
+          <div class="comparador-result card">
+            <h2>2. Resultado do comparativo</h2>
+            <p class="comparador-text">
+              Abaixo, um exemplo de como o D³ pode mostrar, por eixo de habilidade, o quão próximo você
+              já está da vaga escolhida e o quanto a trilha ajuda a fechar esses gaps.
+            </p>
+
+            <!-- Resumo de compatibilidade -->
+            <div class="comparador-resumo">
+              <div class="comparador-resumo__item">
+                <span class="comparador-label">Seu perfil × vaga</span>
+                <span class="comparador-value comparador-value--main">78%</span>
+              </div>
+              <div class="comparador-resumo__item">
+                <span class="comparador-label">Após trilha “Transição para área de Dados”</span>
+                <span class="comparador-value comparador-value--after">92%</span>
+              </div>
+            </div>
+
+            <!-- Tabela de eixos -->
+            <div class="comparador-table">
+              <div class="comparador-table__header">
+                <span>Eixo de habilidade</span>
+                <span>Seu nível atual</span>
+                <span>Nível exigido pela vaga</span>
+                <span>Quanto a trilha ajuda</span>
+                <span>Gap restante</span>
+              </div>
+
+              <!-- Linha 1 -->
+              <div class="comparador-table__row">
+                <span>Habilidades técnicas (dados)</span>
+                <span>
+                  <div class="progress">
+                    <div class="progress__fill" style="width: 50%;"></div>
+                    <span class="progress__value">2 / 5</span>
+                  </div>
+                </span>
+                <span>4 / 5</span>
+                <span>+2 pontos (Python, SQL, BI)</span>
+                <span class="gap gap--small">0–1</span>
+              </div>
+
+              <!-- Linha 2 -->
+              <div class="comparador-table__row">
+                <span>Comunicação com times multidisciplinares</span>
+                <span>
+                  <div class="progress">
+                    <div class="progress__fill" style="width: 60%;"></div>
+                    <span class="progress__value">3 / 5</span>
+                  </div>
+                </span>
+                <span>4 / 5</span>
+                <span>+1 ponto (projetos em grupo da trilha)</span>
+                <span class="gap gap--small">1</span>
+              </div>
+
+              <!-- Linha 3 -->
+              <div class="comparador-table__row">
+                <span>Visão de processos industriais</span>
+                <span>
+                  <div class="progress">
+                    <div class="progress__fill" style="width: 80%;"></div>
+                    <span class="progress__value">4 / 5</span>
+                  </div>
+                </span>
+                <span>4 / 5</span>
+                <span>Trilha complementa com visão de dados</span>
+                <span class="gap gap--small">0</span>
+              </div>
+
+              <!-- Linha 4 -->
+              <div class="comparador-table__row">
+                <span>Fundamentos de IA aplicada</span>
+                <span>
+                  <div class="progress">
+                    <div class="progress__fill" style="width: 30%;"></div>
+                    <span class="progress__value">1–2 / 5</span>
+                  </div>
+                </span>
+                <span>4 / 5</span>
+                <span>+2 pontos com trilha de IA</span>
+                <span class="gap gap--medium">1–2</span>
+              </div>
+            </div>
+
+            <!-- Ações finais -->
+            <div class="comparador-actions">
+              <button class="btn btn--ghost" onclick="location.href='usuario-trilhas.html'">
+                Ver detalhes das trilhas sugeridas
+              </button>
+              <button class="btn btn--primary" onclick="location.href='usuario-oportunidades.html'">
+                Ver oportunidades relacionadas
+              </button>
+            </div>
+
+            <p class="comparador-footnote">
+              Observação: os números acima são ilustrativos. Em uma versão integrada ao banco de dados, o D³
+              calcularia tudo automaticamente com base na sua matriz real, nas exigências da vaga e no
+              conteúdo das trilhas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>D³ – Decisões, Dados e Destinos</span>
+      <span>Desenvolvido por Lucas da Luz Morais</span>
+    </div>
+  </footer>
+
+  <!-- precisa do db.js para ler a matriz salva com o mesmo id de usuário -->
+  <script src="./js/db.js"></script>
+
+  <!-- aqui usa o MESMO caminho onde você colocou o d3-mock.js -->
+  <script src="./js/pages/d3-mock.js"></script>
+
+  <!-- script da página -->
+  <script src="./js/pages/comparador.js"></script>
+</body>
+</html>
+

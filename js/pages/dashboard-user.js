@@ -13,19 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // coloca nome do usuário na página
+  // nome do usuário
   const nameEl = document.querySelector('[data-user-name]');
   if (nameEl) {
-    nameEl.textContent = current.name;
+    nameEl.textContent = current.name || 'Usuário';
   }
 
-  // exemplo de mostrar tipo em algum lugar
+  // tipo/perfil
   const roleEl = document.querySelector('[data-user-type]');
   if (roleEl) {
-    roleEl.textContent = 'Usuário';
+    roleEl.textContent = 'Perfil: Usuário';
   }
 
-  // botão de sair (se você quiser)
+  // botão de sair
   const logoutBtn = document.querySelector('[data-logout]');
   if (logoutBtn) {
     logoutBtn.addEventListener('click', () => {
@@ -33,6 +33,31 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = 'login.html';
     });
   }
+
+  // preenchemos a mini-matriz com valores de exemplo.
+  // Se você tiver algo no current (ex: current.skills), pode adaptar aqui.
+  const skills = {
+    tech: 65,
+    comm: 50,
+    lead: 35,
+    ai: 45,
+  };
+
+  Object.entries(skills).forEach(([key, value]) => {
+    const bar = document.querySelector(`.summary-row [data-skill-bar="${key}"]`);
+    const label = document.querySelector(`.summary-value[data-skill-value="${key}"]`);
+
+    if (bar) {
+      // timeout para dar uma animadinha depois do load
+      setTimeout(() => {
+        bar.style.width = `${value}%`;
+      }, 200);
+    }
+
+    if (label) {
+      label.textContent = `${value}%`;
+    }
+  });
 
   console.log('Dashboard carregado para:', current);
 });

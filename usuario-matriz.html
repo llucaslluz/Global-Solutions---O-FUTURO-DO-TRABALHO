@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Minha matriz de habilidades</title>
+
+  <meta name="description" content="Visualização completa da matriz de habilidades do usuário no D³.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/usuario-pages.css" />
+</head>
+<body data-page="usuario-matriz">
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Minha jornada</span>
+          <span class="logo__tag">Decisões, dados e destinos</span>
+        </div>
+      </div>
+
+<nav class="nav">
+  <a href="dashboard-user.html" class="nav__link">Painel</a>
+  <a href="usuario-perfil.html" class="nav__link">Meu perfil</a>
+  <a href="usuario-matriz.html" class="nav__link nav__link--active">Minha matriz</a>
+  <a href="usuario-trilhas.html" class="nav__link">Minhas trilhas</a>
+  <a href="usuario-oportunidades.html" class="nav__link">Oportunidades</a>
+  <a href="comparador.html" class="nav__link">Comparador</a>
+</nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <header class="page-header">
+          <div>
+            <h1 class="section__title">Minha matriz de habilidades</h1>
+            <p class="section__subtitle">
+              Aqui você enxerga, de forma detalhada, suas habilidades técnicas e comportamentais,
+              o nível atual, o nível desejado e os principais gaps.
+            </p>
+          </div>
+          <button class="btn btn--ghost" onclick="location.href='comparador.html'">
+            Usar no comparador
+          </button>
+        </header>
+
+        <div class="matrix-legend">
+          <span><strong>0</strong> = iniciante</span>
+          <span><strong>5</strong> = referência</span>
+          <span>Gap = diferença entre atual e desejado</span>
+        </div>
+
+        <div class="card matrix-card">
+          <div class="matrix-header">
+            <span>Habilidade</span>
+            <span>Eixo</span>
+            <span>Nível atual (0–5)</span>
+            <span>Nível desejado (0–5)</span>
+            <span>Gap</span>
+          </div>
+
+          <!-- linha de exemplo 1 -->
+          <div class="matrix-row">
+            <span>Programação em Python</span>
+            <span class="matrix-chip matrix-chip--tech">Técnica</span>
+            <span>2</span>
+            <span>4</span>
+            <span class="gap gap--medium">2</span>
+          </div>
+
+          <!-- linha de exemplo 2 -->
+          <div class="matrix-row">
+            <span>Comunicação com times multidisciplinares</span>
+            <span class="matrix-chip matrix-chip--soft">Comportamental</span>
+            <span>3</span>
+            <span>4</span>
+            <span class="gap gap--small">1</span>
+          </div>
+
+          <!-- linha de exemplo 3 -->
+          <div class="matrix-row">
+            <span>Fundamentos de IA aplicada ao trabalho</span>
+            <span class="matrix-chip matrix-chip--ai">Inovação &amp; IA</span>
+            <span>1</span>
+            <span>4</span>
+            <span class="gap gap--high">3</span>
+          </div>
+
+          <!-- linha de exemplo 4 -->
+          <div class="matrix-row">
+            <span>Resolução de problemas complexos</span>
+            <span class="matrix-chip matrix-chip--soft">Comportamental</span>
+            <span>3</span>
+            <span>5</span>
+            <span class="gap gap--medium">2</span>
+          </div>
+
+          <!-- linha de exemplo 5 -->
+          <div class="matrix-row">
+            <span>Automação industrial 4.0</span>
+            <span class="matrix-chip matrix-chip--tech">Técnica</span>
+            <span>2</span>
+            <span>4</span>
+            <span class="gap gap--medium">2</span>
+          </div>
+        </div>
+
+        <div class="matrix-actions">
+  <button class="btn btn--ghost" onclick="location.href='usuario-matriz-editar.html'">
+    Editar matriz
+  </button>
+  <button class="btn btn--primary" onclick="location.href='usuario-trilhas.html'">
+    Ver trilhas sugeridas com base nesses gaps
+  </button>
+</div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>D³ – Decisões, Dados e Destinos</span>
+      <span>Desenvolvido por Lucas da Luz Morais</span>
+    </div>
+  </footer>
+
+    <script src="./js/db.js"></script>
+  <script src="./js/pages/usuario-matriz.js"></script>
+</body>
+</html>

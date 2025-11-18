@@ -11,6 +11,7 @@
   <!-- estilos globais + específicos do dashboard -->
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/dashboard-user.css" />
+  <link rel="stylesheet" href="./css/usuario-pages.css" />
 </head>
 <body data-page="dashboard-user">
   <!-- TOPBAR -->
@@ -24,12 +25,16 @@
         </div>
       </div>
 
-      <nav class="nav">
-        <a href="index.html">Início</a>
-        <a href="usuario-trilhas.html">Minhas trilhas</a>
-        <a href="usuario-oportunidades.html">Oportunidades</a>
-        <button class="nav__logout" id="btnLogout">Sair</button>
-      </nav>
+<nav class="nav">
+  <a href="dashboard-user.html" class="nav__link nav__link--active">Painel</a>
+  <a href="usuario-perfil.html" class="nav__link">Meu perfil</a>
+  <a href="usuario-matriz.html" class="nav__link">Minha matriz</a>
+  <a href="usuario-trilhas.html" class="nav__link">Minhas trilhas</a>
+  <a href="usuario-oportunidades.html" class="nav__link">Oportunidades</a>
+  <a href="comparador.html" class="nav__link">Comparador</a>
+  <button class="nav__logout" data-logout>Sair</button>
+</nav>
+
     </div>
   </header>
 
@@ -49,7 +54,7 @@
           </p>
 
           <div class="hero__tags">
-            <span class="hero__tag" data-user-role>Perfil: —</span>
+            <span class="hero__tag" data-user-type>Perfil: Usuário</span>
             <span class="hero__tag">Foco: evolução contínua</span>
           </div>
 
@@ -118,11 +123,27 @@
       <div class="container">
         <h2 class="section__title">Visão geral da sua conta</h2>
         <p class="section__subtitle">
-          Um resumo dos principais blocos que o D³ vai conectar para ajudar nas suas decisões:
-          trilhas de estudo, oportunidades e comparação com o mercado.
+          Um resumo dos principais blocos que o D³ conecta para te ajudar nas suas decisões:
+          matriz de habilidades, trilhas de estudo e oportunidades no mercado.
         </p>
 
         <div class="grid grid--3 dashboard-overview">
+          <article class="card">
+            <span class="card__badge">Matriz</span>
+            <h3>Minha matriz de habilidades</h3>
+            <p>
+              Visualize todas as suas habilidades técnicas e comportamentais, níveis atuais e desejados.
+            </p>
+            <ul class="list">
+              <li>Classificação por eixo (técnico, soft skills, IA)</li>
+              <li>Destaque de gaps prioritários</li>
+              <li>Base para recomendações de trilhas</li>
+            </ul>
+            <button class="btn btn--ghost card__btn" onclick="location.href='usuario-matriz.html'">
+              Ver matriz completa
+            </button>
+          </article>
+
           <article class="card">
             <span class="card__badge">Trilhas</span>
             <h3>Trilhas de desenvolvimento</h3>
@@ -141,37 +162,17 @@
 
           <article class="card">
             <span class="card__badge">Oportunidades</span>
-            <h3>Vagas e possibilidades</h3>
+            <h3>Mapa de oportunidades</h3>
             <p>
-              Vagas e funções que combinam com o seu perfil e com o futuro do trabalho.
+              Veja como suas habilidades se conectam às vagas e às instituições ao seu redor.
             </p>
             <ul class="list">
-              <li>Filtro por área, senioridade e tipo de carreira</li>
-              <li>Visualização de compatibilidade por habilidade</li>
-              <li>Conexão com empresas parceiras</li>
+              <li>Mapa com escolas e empresas</li>
+              <li>Compatibilidade por habilidade</li>
+              <li>Acesso rápido às vagas mais alinhadas</li>
             </ul>
-            <button class="btn btn--ghost card__btn" onclick="location.href='usuario-oportunidades.html'">
+            <button class="btn btn--primary card__btn" onclick="location.href='usuario-oportunidades.html'">
               Ver oportunidades
-            </button>
-          </article>
-
-          <article class="card">
-            <span class="card__badge">Comparador</span>
-            <h3>Perfil × Vagas × Cursos</h3>
-            <p>
-              Use o comparador do D³ para enxergar, de forma visual, o quanto o seu perfil se aproxima
-              de uma vaga ou trilha específica.
-            </p>
-            <ul class="list">
-              <li>Comparar perfil × vaga</li>
-              <li>Ver gaps por habilidade</li>
-              <li>Receber sugestões de estudo</li>
-            </ul>
-            <button
-              class="btn btn--primary card__btn"
-              onclick="location.href='comparador.html'"
-            >
-              Ir para o comparador
             </button>
           </article>
         </div>
@@ -201,9 +202,10 @@
               <li>Tempo de experiência</li>
               <li>Objetivo (troca, promoção, recolocação)</li>
             </ul>
-            <button class="btn btn--ghost card__btn" disabled>
-              Em breve
-            </button>
+           <button class="btn btn--ghost card__btn" onclick="location.href='usuario-perfil.html'">
+  Completar perfil
+</button>
+
           </article>
 
           <!-- Card 2 -->
@@ -248,8 +250,50 @@
       </div>
     </section>
 
-    <!-- BLOCO FINAL -->
+    <!-- ATIVIDADES EM ANDAMENTO -->
     <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Atividades em andamento</h2>
+        <p class="section__subtitle">
+          Uma visão rápida do que você já começou e ainda está em progresso.
+        </p>
+
+        <div class="card activities-card">
+          <div class="activities-header">
+            <span>Trilha</span>
+            <span>Tipo</span>
+            <span>Status</span>
+            <span>Progresso</span>
+          </div>
+          <div class="activities-row">
+            <span>Transição para área de Dados</span>
+            <span>Trilha de requalificação</span>
+            <span class="badge badge--progress">Em andamento</span>
+            <div class="progress">
+              <div class="progress__fill" style="width: 40%;"></div>
+              <span class="progress__value">40%</span>
+            </div>
+          </div>
+          <div class="activities-row">
+            <span>Fundamentos de IA aplicada</span>
+            <span>Trilha de upskilling</span>
+            <span class="badge badge--progress">Em andamento</span>
+            <div class="progress">
+              <div class="progress__fill" style="width: 20%;"></div>
+              <span class="progress__value">20%</span>
+            </div>
+          </div>
+          <div class="activities-footer">
+            <button class="btn btn--ghost" onclick="location.href='usuario-trilhas.html'">
+              Gerenciar trilhas
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO FINAL -->
+    <section class="section">
       <div class="container closing">
         <div class="closing__copy">
           <h2 class="section__title">Sua carreira como um mapa vivo</h2>

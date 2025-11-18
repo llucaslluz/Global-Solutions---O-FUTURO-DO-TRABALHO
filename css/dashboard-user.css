@@ -11,14 +11,14 @@ body[data-page="dashboard-user"] {
   color: var(--text-main);
 }
 
-/* Reaproveita o container global */
-.section {
+/* Reaproveita o container global – escopo só no dashboard */
+body[data-page="dashboard-user"] .section {
   padding: 3.5rem 0;
 }
 
 /* ---------- TOPBAR ---------- */
 
-.topbar {
+body[data-page="dashboard-user"] .topbar {
   position: sticky;
   top: 0;
   z-index: 20;
@@ -27,7 +27,7 @@ body[data-page="dashboard-user"] {
   border-bottom: 1px solid rgba(148, 163, 184, 0.18);
 }
 
-.nav__logout {
+body[data-page="dashboard-user"] .nav__logout {
   border-radius: 999px;
   border: 1px solid rgba(248, 113, 113, 0.7);
   background: rgba(127, 29, 29, 0.2);
@@ -38,36 +38,36 @@ body[data-page="dashboard-user"] {
   transition: 0.18s ease-out;
 }
 
-.nav__logout:hover {
+body[data-page="dashboard-user"] .nav__logout:hover {
   background: rgba(248, 113, 113, 0.15);
   border-color: rgba(248, 113, 113, 0.9);
 }
 
 /* ---------- HERO / CABEÇALHO ---------- */
 
-.section--hero {
+body[data-page="dashboard-user"] .section--hero {
   padding-top: 3.5rem;
 }
 
-.hero__content {
+body[data-page="dashboard-user"] .hero__content {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
   gap: 2.5rem;
   align-items: flex-start;
 }
 
-.hero__text h1 {
+body[data-page="dashboard-user"] .hero__text h1 {
   font-size: clamp(2rem, 2.7vw + 1.2rem, 2.6rem);
   line-height: 1.1;
   margin-bottom: 0.6rem;
 }
 
-.hero__text p {
+body[data-page="dashboard-user"] .hero__text p {
   color: var(--text-muted);
   max-width: 36rem;
 }
 
-.hero__badge {
+body[data-page="dashboard-user"] .hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -80,19 +80,19 @@ body[data-page="dashboard-user"] {
   margin-bottom: 0.8rem;
 }
 
-.hero__badge::before {
+body[data-page="dashboard-user"] .hero__badge::before {
   content: "◎";
   font-size: 0.7rem;
 }
 
-.hero__tags {
+body[data-page="dashboard-user"] .hero__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-top: 1rem;
 }
 
-.hero__tag {
+body[data-page="dashboard-user"] .hero__tag {
   padding: 0.2rem 0.7rem;
   border-radius: 999px;
   font-size: 0.75rem;
@@ -101,7 +101,7 @@ body[data-page="dashboard-user"] {
   color: var(--text-muted);
 }
 
-.hero__quick-actions {
+body[data-page="dashboard-user"] .hero__quick-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
@@ -110,7 +110,7 @@ body[data-page="dashboard-user"] {
 
 /* ---------- CARTÃO RESUMO / MATRIZ ---------- */
 
-.hero__summary-card {
+body[data-page="dashboard-user"] .hero__summary-card {
   background: radial-gradient(circle at top, #111827 0, #020617 60%);
   border-radius: var(--radius-lg);
   padding: 1.8rem 1.5rem;
@@ -120,7 +120,7 @@ body[data-page="dashboard-user"] {
   overflow: hidden;
 }
 
-.hero__summary-card::before {
+body[data-page="dashboard-user"] .hero__summary-card::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -128,24 +128,24 @@ body[data-page="dashboard-user"] {
   pointer-events: none;
 }
 
-.hero__summary-card h2 {
+body[data-page="dashboard-user"] .hero__summary-card h2 {
   font-size: 1.1rem;
   margin-bottom: 0.4rem;
 }
 
-.summary__subtitle {
+body[data-page="dashboard-user"] .summary__subtitle {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 1rem;
 }
 
-.summary-matrix {
+body[data-page="dashboard-user"] .summary-matrix {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
 }
 
-.summary-row {
+body[data-page="dashboard-user"] .summary-row {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 3fr) auto;
   align-items: center;
@@ -153,18 +153,17 @@ body[data-page="dashboard-user"] {
   font-size: 0.85rem;
 }
 
-.summary-row > span:first-child {
+body[data-page="dashboard-user"] .summary-row > span:first-child {
   color: var(--text-muted);
 }
 
-.summary-value {
+body[data-page="dashboard-user"] .summary-value {
   font-size: 0.8rem;
   color: #c7d2fe;
 }
 
-/* barras reaproveitam a classe .bar global se existir,
-   aqui só garantimos que funcione isolado */
-.summary-row .bar {
+/* barras da mini matriz */
+body[data-page="dashboard-user"] .summary-row .bar {
   width: 100%;
   height: 0.45rem;
   border-radius: 999px;
@@ -173,7 +172,7 @@ body[data-page="dashboard-user"] {
   overflow: hidden;
 }
 
-.summary-row .bar__fill {
+body[data-page="dashboard-user"] .summary-row .bar__fill {
   height: 100%;
   border-radius: inherit;
   background: linear-gradient(90deg, #6366f1, #22c55e);
@@ -182,7 +181,7 @@ body[data-page="dashboard-user"] {
   transition: width 0.7s ease-out;
 }
 
-.summary__note {
+body[data-page="dashboard-user"] .summary__note {
   margin-top: 0.9rem;
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -190,15 +189,15 @@ body[data-page="dashboard-user"] {
 
 /* ---------- VISÃO GERAL (TRILHAS / OPORTUNIDADES / COMPARADOR) ---------- */
 
-.dashboard-overview {
+body[data-page="dashboard-user"] .dashboard-overview {
   margin-top: 2rem;
 }
 
-.dashboard-overview .card {
+body[data-page="dashboard-user"] .dashboard-overview .card {
   min-height: 260px;
 }
 
-.card__badge {
+body[data-page="dashboard-user"] .card__badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -211,25 +210,25 @@ body[data-page="dashboard-user"] {
   margin-bottom: 0.45rem;
 }
 
-.card__btn {
+body[data-page="dashboard-user"] .card__btn {
   margin-top: 0.75rem;
 }
 
 /* ---------- BLOCO FINAL ---------- */
 
-.closing {
+body[data-page="dashboard-user"] .closing {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
   gap: 2rem;
   align-items: flex-start;
 }
 
-.closing__copy p {
+body[data-page="dashboard-user"] .closing__copy p {
   color: var(--text-muted);
   margin-bottom: 0.6rem;
 }
 
-.closing__box {
+body[data-page="dashboard-user"] .closing__box {
   background: rgba(15, 23, 42, 0.9);
   border-radius: var(--radius-md);
   padding: 1.3rem 1.1rem;
@@ -237,39 +236,140 @@ body[data-page="dashboard-user"] {
   box-shadow: var(--shadow-soft);
 }
 
-.closing__hint {
+body[data-page="dashboard-user"] .closing__hint {
   font-size: 0.9rem;
   color: var(--text-main);
+}
+
+/* ---------- ATIVIDADES EM ANDAMENTO ---------- */
+
+body[data-page="dashboard-user"] .activities-card {
+  margin-top: 1.8rem;
+  padding: 1.3rem 1.2rem;
+}
+
+body[data-page="dashboard-user"] .activities-header,
+body[data-page="dashboard-user"] .activities-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2.6fr) minmax(0, 1.6fr) minmax(0, 1.3fr) minmax(0, 1.8fr);
+  gap: 0.8rem;
+  align-items: center;
+}
+
+body[data-page="dashboard-user"] .activities-header {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+body[data-page="dashboard-user"] .activities-row {
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+}
+
+body[data-page="dashboard-user"] .activities-footer {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* badges e progresso aqui só valem pro dashboard */
+body[data-page="dashboard-user"] .badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(129, 140, 248, 0.7);
+  color: #c7d2fe;
+  background: rgba(15, 23, 42, 0.9);
+}
+
+body[data-page="dashboard-user"] .badge--progress {
+  border-color: rgba(52, 211, 153, 0.8);
+  color: #bbf7d0;
+  background: rgba(6, 78, 59, 0.35);
+}
+
+body[data-page="dashboard-user"] .progress {
+  position: relative;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #020617;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  overflow: visible; /* deixa a % sair para fora da barra */
+}
+
+body[data-page="dashboard-user"] .progress__fill {
+  position: absolute;
+  inset: 0;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  transition: width 0.5s ease-out;
+}
+
+body[data-page="dashboard-user"] .progress__value {
+  position: absolute;
+  right: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  color: #e5e7eb;
 }
 
 /* ---------- RESPONSIVO ---------- */
 
 @media (max-width: 900px) {
-  .hero__content {
+  body[data-page="dashboard-user"] .hero__content {
     grid-template-columns: 1fr;
   }
 
-  .hero__summary-card {
+  body[data-page="dashboard-user"] .hero__summary-card {
     margin-top: 1.5rem;
   }
 
-  .closing {
+  body[data-page="dashboard-user"] .closing {
     grid-template-columns: 1fr;
+  }
+
+  body[data-page="dashboard-user"] .activities-header,
+  body[data-page="dashboard-user"] .activities-row {
+    grid-template-columns: minmax(0, 2.5fr) minmax(0, 1.5fr) minmax(0, 1.2fr) minmax(0, 1.8fr);
   }
 }
 
 @media (max-width: 640px) {
-  .hero__quick-actions {
+  body[data-page="dashboard-user"] .hero__quick-actions {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .summary-row {
+  body[data-page="dashboard-user"] .summary-row {
     grid-template-columns: 1fr;
     gap: 0.3rem;
   }
 
-  .summary-value {
+  body[data-page="dashboard-user"] .summary-value {
     justify-self: flex-end;
+  }
+
+  body[data-page="dashboard-user"] .activities-header {
+    display: none;
+  }
+
+  body[data-page="dashboard-user"] .activities-row {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+
+  body[data-page="dashboard-user"] .progress__value {
+    right: 0.3rem;
   }
 }

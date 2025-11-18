@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Detalhe da trilha</title>
+
+  <meta name="description" content="Detalhe de uma trilha recomendada no D³.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/usuario-pages.css" />
+</head>
+<body data-page="trilha-detalhe">
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Minha jornada</span>
+          <span class="logo__tag">Decisões, dados e destinos</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="dashboard-user.html" class="nav__link">Painel</a>
+        <a href="usuario-perfil.html" class="nav__link">Meu perfil</a>
+        <a href="usuario-matriz.html" class="nav__link">Minha matriz</a>
+        <a href="usuario-trilhas.html" class="nav__link nav__link--active">Minhas trilhas</a>
+        <a href="usuario-oportunidades.html" class="nav__link">Oportunidades</a>
+        <a href="comparador.html" class="nav__link">Comparador</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container trilha-detalhe">
+        <!-- Cabeçalho da trilha -->
+        <header class="page-header">
+          <div>
+            <span class="badge badge--trilha" data-trilha-tipo>Trilha</span>
+            <h1 class="section__title" data-trilha-nome>Nome da trilha</h1>
+            <p class="section__subtitle" data-trilha-resumo>
+              Descrição resumida da trilha, explicando para quem ela foi pensada
+              e qual objetivo principal.
+            </p>
+          </div>
+          <button class="btn btn--ghost" onclick="location.href='usuario-trilhas.html'">
+            Voltar para trilhas
+          </button>
+        </header>
+
+        <div class="trilha-detalhe-layout">
+          <!-- Coluna principal -->
+          <div class="trilha-detalhe-main card">
+            <h2>Resumo da trilha</h2>
+            <p data-trilha-descricao>
+              Esta trilha combina fundamentos técnicos e soft skills para levar você
+              de um nível iniciante/intermediário até um nível em que já consegue
+              atuar em projetos reais.
+            </p>
+
+            <div class="trilha-meta">
+              <span><strong>Duração estimada:</strong> <span data-trilha-duracao>—</span></span>
+              <span><strong>Nível alvo:</strong> <span data-trilha-nivel>—</span></span>
+              <span><strong>Formato:</strong> <span data-trilha-formato>—</span></span>
+              <span><strong>Instituição:</strong> <span data-trilha-instituicao>—</span></span>
+            </div>
+
+            <h3>Etapas principais</h3>
+            <ol class="trilha-steps" data-trilha-steps>
+              <!-- JS vai montar os <li> aqui -->
+            </ol>
+          </div>
+
+          <!-- Coluna lateral -->
+          <aside class="trilha-detalhe-side card">
+            <h2>Conexão com sua matriz</h2>
+            <p data-trilha-matriz-text>
+              Esta trilha foi recomendada com base nos gaps em habilidades técnicas,
+              comunicação e fundamentos de IA identificados na sua matriz.
+            </p>
+
+            <ul class="list" data-trilha-beneficios>
+              <li>Reduz gaps em <strong>habilidades técnicas</strong></li>
+              <li>Fortalece <strong>comunicação em times multidisciplinares</strong></li>
+              <li>Prepara para vagas relacionadas à trilha selecionada</li>
+            </ul>
+
+            <button class="btn btn--primary trilha-action-btn" id="btnAddTrilha">
+              Adicionar à minha jornada (demo)
+            </button>
+
+            <button class="btn btn--ghost" onclick="location.href='usuario-oportunidades.html'">
+              Ver vagas relacionadas
+            </button>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>D³ – Decisões, Dados e Destinos</span>
+      <span>Desenvolvido por Lucas da Luz Morais</span>
+    </div>
+  </footer>
+
+  <!-- mocks + lógica da tela -->
+  <script src="./js/mock/d3-mock.js"></script>
+  <script src="./js/pages/trilha-detalhe.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Meu perfil</title>
+
+  <meta name="description" content="Tela de perfil do usuário no D³ para completar dados e objetivos de carreira.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/usuario-pages.css" />
+</head>
+<body data-page="usuario-perfil">
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Minha jornada</span>
+          <span class="logo__tag">Decisões, dados e destinos</span>
+        </div>
+      </div>
+
+<nav class="nav">
+  <a href="dashboard-user.html" class="nav__link">Painel</a>
+  <a href="usuario-perfil.html" class="nav__link nav__link--active">Meu perfil</a>
+  <a href="usuario-matriz.html" class="nav__link">Minha matriz</a>
+  <a href="usuario-trilhas.html" class="nav__link">Minhas trilhas</a>
+  <a href="usuario-oportunidades.html" class="nav__link">Oportunidades</a>
+  <a href="comparador.html" class="nav__link">Comparador</a>
+</nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container perfil-layout">
+        <header class="page-header">
+          <div>
+            <h1 class="section__title">Meu perfil</h1>
+            <p class="section__subtitle">
+              Complete seu perfil com informações sobre sua experiência, objetivos e preferências.
+              Esses dados serão usados pelo D³ para personalizar trilhas e oportunidades.
+            </p>
+          </div>
+        </header>
+
+        <div class="perfil-grid">
+          <!-- Bloco 1: Dados básicos -->
+          <div class="card perfil-card">
+            <h2>Dados básicos</h2>
+            <div class="perfil-fields">
+              <div class="field">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" placeholder="Seu nome" value="" />
+              </div>
+
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="seuemail@exemplo.com" />
+              </div>
+
+              <div class="field">
+                <label for="cidade">Cidade / Região</label>
+                <input type="text" id="cidade" placeholder="Ex: São Paulo – SP" />
+              </div>
+
+              <div class="field field--split">
+                <div>
+                  <label for="tempo-exp">Tempo de experiência profissional</label>
+                  <select id="tempo-exp">
+                    <option value="">Selecione...</option>
+                    <option value="0-1">0–1 ano</option>
+                    <option value="1-3">1–3 anos</option>
+                    <option value="3-5">3–5 anos</option>
+                    <option value="5-10">5–10 anos</option>
+                    <option value="10+">Mais de 10 anos</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="formacao">Nível de formação</label>
+                  <select id="formacao">
+                    <option value="">Selecione...</option>
+                    <option value="medio">Ensino médio</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="graduacao">Graduação</option>
+                    <option value="pos">Pós / Especialização</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloco 2: Objetivos de carreira -->
+          <div class="card perfil-card">
+            <h2>Objetivos de carreira</h2>
+            <div class="perfil-fields">
+              <div class="field">
+                <label for="area-interesse">Área de interesse principal</label>
+                <select id="area-interesse">
+                  <option value="">Selecione...</option>
+                  <option value="dados">Dados / BI / Analytics</option>
+                  <option value="dev">Desenvolvimento de software</option>
+                  <option value="automacao">Automação / Indústria 4.0</option>
+                  <option value="gestao">Gestão / Liderança</option>
+                  <option value="outros">Outros</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="objetivo">Objetivo principal no momento</label>
+                <select id="objetivo">
+                  <option value="">Selecione...</option>
+                  <option value="primeiro-emprego">Conseguir o primeiro emprego</option>
+                  <option value="transicao">Fazer transição de carreira</option>
+                  <option value="promocao">Buscar promoção na área atual</option>
+                  <option value="recolocacao">Recolocação no mercado</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="descricao-objetivo">Conte um pouco mais sobre o que você busca</label>
+                <textarea id="descricao-objetivo" rows="4" placeholder="Ex: quero migrar de manutenção industrial para análise de dados, usando minha experiência atual com máquinas e processos."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloco 3: Preferências de jornada -->
+          <div class="card perfil-card">
+            <h2>Preferências de jornada</h2>
+            <div class="perfil-fields">
+              <div class="field field--split">
+                <div>
+                  <label for="modelo-trabalho">Modelo de trabalho preferido</label>
+                  <select id="modelo-trabalho">
+                    <option value="">Selecione...</option>
+                    <option value="presencial">Presencial</option>
+                    <option value="hibrido">Híbrido</option>
+                    <option value="remoto">Remoto</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="disponibilidade">Disponibilidade de estudo</label>
+                  <select id="disponibilidade">
+                    <option value="">Selecione...</option>
+                    <option value="ate-5">Até 5h por semana</option>
+                    <option value="5-10">5–10h por semana</option>
+                    <option value="10-15">10–15h por semana</option>
+                    <option value="15+">Mais de 15h por semana</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="preferencia-formacao">Preferência de formação</label>
+                <select id="preferencia-formacao">
+                  <option value="">Selecione...</option>
+                  <option value="rapida">Cursos rápidos e práticos</option>
+                  <option value="formais">Formações mais longas (graduação, pós)</option>
+                  <option value="misturado">Combinação de cursos rápidos e formais</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="obs-perfil">Observações adicionais</label>
+                <textarea id="obs-perfil" rows="3" placeholder="Ex: prefiro opções online à noite, por causa do trabalho."></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="perfil-actions">
+          <button class="btn btn--ghost" onclick="location.href='dashboard-user.html'">
+            Voltar para o painel
+          </button>
+          <button class="btn btn--primary" disabled>
+            Salvar Alterações
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>D³ – Decisões, Dados e Destinos</span>
+      <span>Desenvolvido por Lucas da Luz Morais</span>
+    </div>
+  </footer>
+  
+  <script src="./js/db.js"></script>
+  <script src="./js/pages/usuario-perfil.js"></script>
+</body>
+</html>

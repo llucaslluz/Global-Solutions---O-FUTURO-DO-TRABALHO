@@ -1,0 +1,303 @@
+/* ==========================================
+   Página: Comparador de jornada (comparador)
+   Arquivo: css/comparador.css
+   ========================================== */
+
+body[data-page="comparador"] {
+  background:
+    radial-gradient(circle at top, #020617 0, #020617 55%, #000 100%),
+    radial-gradient(circle at bottom, #020617 0, #000 60%);
+  color: var(--text-main);
+}
+
+/* Topbar coerente com o resto do D³ */
+body[data-page="comparador"] .topbar {
+  background: rgba(2, 6, 23, 0.96);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+/* Navegação */
+body[data-page="comparador"] .nav__link {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: 0.15s ease-out;
+}
+
+body[data-page="comparador"] .nav__link:hover {
+  color: #e5e7eb;
+  background: rgba(15, 23, 42, 0.8);
+}
+
+body[data-page="comparador"] .nav__link--active {
+  color: #e5e7eb;
+  background: rgba(79, 70, 229, 0.25);
+  border: 1px solid rgba(129, 140, 248, 0.7);
+}
+
+/* Cabeçalho da página */
+body[data-page="comparador"] .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+/* ============ LAYOUT PRINCIPAL ============ */
+
+.comparador-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.6fr);
+  gap: 1.8rem;
+  margin-top: 1rem;
+}
+
+.comparador-panel,
+.comparador-result {
+  padding: 1.3rem 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), #020617);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.6);
+}
+
+.comparador-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* ============ LISTA DE VAGAS / TRILHAS ============ */
+
+.comparador-subtitle {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.comparador-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comparador-item {
+  width: 100%;
+  text-align: left;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  padding: 0.55rem 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out,
+              background 0.15s ease-out, transform 0.08s ease-out;
+}
+
+.comparador-item:hover {
+  border-color: rgba(129, 140, 248, 0.9);
+  box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.35);
+  transform: translateY(-1px);
+}
+
+.comparador-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.85rem;
+}
+
+.comparador-item__body span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ativo */
+.comparador-item--active {
+  border-color: rgba(34, 197, 94, 0.85);
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.35);
+  background: rgba(15, 23, 42, 0.98);
+}
+
+.comparador-item--secondary {
+  opacity: 0.95;
+}
+
+.comparador-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.8rem;
+}
+
+/* ============ RESUMO DOS PERCENTUAIS ============ */
+
+.comparador-resumo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 0.8rem 0 1.2rem;
+}
+
+.comparador-resumo__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.comparador-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.comparador-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.comparador-value--main {
+  color: #facc15;
+}
+
+.comparador-value--after {
+  color: #4ade80;
+}
+
+/* ============ TABELA DOS EIXOS ============ */
+
+.comparador-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.comparador-table__header,
+.comparador-table__row {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 2.1fr)
+    minmax(0, 1.5fr)
+    minmax(0, 1.5fr)
+    minmax(0, 2.1fr)
+    minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.comparador-table__header {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.comparador-table__row {
+  padding: 0.35rem 0;
+}
+
+/* gap visual */
+.gap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  min-width: 1.8rem;
+  text-align: center;
+}
+
+.gap--small {
+  background: rgba(34, 197, 94, 0.2);
+  color: #bbf7d0;
+}
+
+.gap--medium {
+  background: rgba(250, 204, 21, 0.2);
+  color: #facc15;
+}
+
+.gap--high {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fecaca;
+}
+
+/* ============ BARRAS DE PROGRESSO (SÓ NO COMPARADOR) ============ */
+
+body[data-page="comparador"] .progress {
+  position: relative;
+  width: 100%;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: #020617;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  overflow: visible; /* não cortar a % */
+}
+
+body[data-page="comparador"] .progress__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #6366f1, #22c55e);
+}
+
+body[data-page="comparador"] .progress__value {
+  position: absolute;
+  right: -0.1rem;
+  top: 50%;
+  transform: translate(110%, -50%);
+  font-size: 0.78rem;
+  color: #e5e7eb;
+}
+
+/* ============ AÇÕES FINAIS ============ */
+
+.comparador-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: flex-end;
+}
+
+.comparador-footnote {
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ============ RESPONSIVO ============ */
+
+@media (max-width: 900px) {
+  body[data-page="comparador"] .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comparador-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .comparador-resumo {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .comparador-table__header {
+    display: none;
+  }
+
+  .comparador-table__row {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+}

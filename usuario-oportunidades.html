@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Mapa de oportunidades</title>
+
+  <meta name="description" content="Mapa de oportunidades do usuário no D³, conectando escolas e empresas.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/usuario-pages.css" />
+</head>
+<body data-page="usuario-oportunidades">
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Minha jornada</span>
+          <span class="logo__tag">Decisões, dados e destinos</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="dashboard-user.html" class="nav__link">Painel</a>
+        <a href="usuario-perfil.html" class="nav__link">Meu perfil</a>
+        <a href="usuario-matriz.html" class="nav__link">Minha matriz</a>
+        <a href="usuario-trilhas.html" class="nav__link">Minhas trilhas</a>
+        <a href="usuario-oportunidades.html" class="nav__link nav__link--active">Oportunidades</a>
+        <a href="comparador.html" class="nav__link">Comparador</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <header class="page-header">
+          <div>
+            <h1 class="section__title">Mapa de oportunidades</h1>
+            <p class="section__subtitle">
+              Visualize, em um único lugar, como suas habilidades se conectam às vagas e
+              às instituições (escolas e empresas) no ecossistema do D³.
+            </p>
+          </div>
+          <button class="btn btn--ghost" onclick="location.href='comparador.html'">
+            Ver comparador
+          </button>
+        </header>
+
+        <div class="map-layout">
+          <!-- Mapa conceitual (fica estático mesmo) -->
+          <div class="map-panel">
+            <div class="map-placeholder">
+              <span class="map-user">Você</span>
+
+              <span class="map-pin map-pin--school" style="top: 20%; left: 15%;">Escola A</span>
+              <span class="map-pin map-pin--school" style="top: 60%; left: 25%;">Escola B</span>
+
+              <span class="map-pin map-pin--company" style="top: 30%; left: 65%;">Empresa X</span>
+              <span class="map-pin map-pin--company" style="top: 70%; left: 75%;">Empresa Y</span>
+            </div>
+            <p class="map-caption">
+              Representação conceitual: no protótipo, o mapa é ilustrativo. Em uma versão
+              futura, ele poderá ser conectado a dados reais (geolocalização, APIs de vagas, etc.).
+            </p>
+          </div>
+
+          <!-- Lista dinâmica de oportunidades -->
+          <div class="map-list-panel">
+            <h2 class="map-list-title">Oportunidades em destaque</h2>
+
+            <div class="oportunidades-list" data-oportunidades-list></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>D³ – Decisões, Dados e Destinos</span>
+      <span>Desenvolvido por Lucas da Luz Morais</span>
+    </div>
+  </footer>
+
+  <script src="./js/pages/d3-mock.js"></script>
+  <script src="./js/pages/usuario-oportunidades.js"></script>
+</body>
+</html>

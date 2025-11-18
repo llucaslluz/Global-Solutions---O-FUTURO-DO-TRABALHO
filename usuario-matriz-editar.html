@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Editar matriz de habilidades</title>
+
+  <meta name="description" content="Edição da matriz de habilidades do usuário no D³.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/usuario-pages.css" />
+</head>
+<body data-page="usuario-matriz-editar">
+  <header class="topbar">
+    <div class="container topbar__content">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <span class="logo__mark">D³</span>
+        <div class="logo__group">
+          <span class="logo__text">Minha jornada</span>
+          <span class="logo__tag">Decisões, dados e destinos</span>
+        </div>
+      </div>
+
+<nav class="nav">
+  <a href="dashboard-user.html" class="nav__link">Painel</a>
+  <a href="usuario-perfil.html" class="nav__link">Meu perfil</a>
+  <a href="usuario-matriz.html" class="nav__link nav__link--active">Minha matriz</a>
+  <a href="usuario-trilhas.html" class="nav__link">Minhas trilhas</a>
+  <a href="usuario-oportunidades.html" class="nav__link">Oportunidades</a>
+  <a href="comparador.html" class="nav__link">Comparador</a>
+</nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <header class="page-header">
+          <div>
+            <h1 class="section__title">Editar matriz de habilidades</h1>
+            <p class="section__subtitle">
+              Ajuste os níveis atuais e desejados das suas habilidades. No protótipo, os dados são apenas ilustrativos,
+              mas mostram como o D³ poderia capturar essas informações.
+            </p>
+          </div>
+          <button class="btn btn--ghost" onclick="location.href='usuario-matriz.html'">
+            Voltar para visualização da matriz
+          </button>
+        </header>
+
+        <div class="card matrix-edit-card">
+          <div class="matrix-edit-header">
+            <span>Habilidade</span>
+            <span>Eixo</span>
+            <span>Nível atual (0–5)</span>
+            <span>Nível desejado (0–5)</span>
+          </div>
+
+          <!-- Linha 1 -->
+          <div class="matrix-edit-row">
+            <div class="field">
+              <input type="text" value="Programação em Python" />
+            </div>
+            <div class="field">
+              <select>
+                <option value="tech" selected>Técnica</option>
+                <option value="soft">Comportamental</option>
+                <option value="ai">Inovação &amp; IA</option>
+              </select>
+            </div>
+            <div class="field matrix-level">
+              <span class="matrix-level__label">Atual: <strong>2</strong></span>
+              <input type="range" min="0" max="5" step="1" value="2" disabled />
+            </div>
+            <div class="field matrix-level">
+              <span class="matrix-level__label">Desejado: <strong>4</strong></span>
+              <input type="range" min="0" max="5" step="1" value="4" disabled />
+            </div>
+          </div>
+
+          <!-- Linha 2 -->
+          <div class="matrix-edit-row">
+            <div class="field">
+              <input type="text" value="Comunicação com times multidisciplinares" />
+            </div>
+            <div class="field">
+              <select>
+                <option value="tech">Técnica</option>
+                <option value="soft" selected>Comportamental</option>
+                <option value="ai">Inovação &amp; IA</option>
+              </select>
+            </div>
+            <div class="field matrix-level">
+              <span class="matrix-level__label">Atual: <strong>3</strong></span>
+              <input type="range" min="0" max="5" step="1" value="3" disabled />
+            </div>
+            <div class="field matrix-level">
+              <span class="matrix-level__label">Desejado: <strong>4</strong></span>
+              <input type="range" min="0" max="5" step="1" value="4" disabled />
+            </div>
+          </div>
+
+          <!-- Linha 3 -->
+          <div class="matrix-edit-row">
+            <div class="field">
+              <input type="text" value="Fundamentos de IA aplicada ao trabalho" />
+            </div>
+            <div class="field">
+              <select>
+                <option value="tech">Técnica</option>
+                <option value="soft">Comportamental</option>
+                <option value="ai" selected>Inovação &amp; IA</option>
+              </select>
+            </div>
+            <div class="field matrix-level">
+              <span class="matrix-level__label">Atual: <strong>1</strong></span>
+              <input type="range" min="0" max="5" step="1" value="1" disabled />
+            </div>
+            <div class="field matrix-level">
+              <span class="matrix-level__label">Desejado: <strong>4</strong></span>
+              <input type="range" min="0" max="5" step="1" value="4" disabled />
+            </div>
+          </div>
+
+          <!-- Linha 4 -->
+          <div class="matrix-edit-row">
+            <div class="field">
+              <input type="text" value="Resolução de problemas complexos" />
+            </div>
+            <div class="field">
+              <select>
+                <option value="tech">Técnica</option>
+                <option value="soft" selected>Comportamental</option>
+                <option value="ai">Inovação &amp; IA</option>
+              </select>
+            </div>
+            <div class="field matrix-level">
+              <span class="matrix-level__label">Atual: <strong>3</strong></span>
+              <input type="range" min="0" max="5" step="1" value="3" disabled />
+            </div>
+            <div class="field matrix-level">
+              <span class="matrix-level__label">Desejado: <strong>5</strong></span>
+              <input type="range" min="0" max="5" step="1" value="5" disabled />
+            </div>
+          </div>
+        </div>
+
+        <p class="matrix-edit-note">
+          No protótipo, os campos estão desabilitados apenas para ilustrar a interface de edição.
+          Em uma versão conectada ao banco, aqui seria possível ajustar os valores e salvar as alterações.
+        </p>
+
+        <div class="matrix-actions">
+          <button class="btn btn--ghost" onclick="location.href='usuario-matriz.html'">
+            Voltar para matriz
+          </button>
+          <button class="btn btn--primary" disabled>
+            Salvar Alterações
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>D³ – Decisões, Dados e Destinos</span>
+      <span>Desenvolvido por Lucas da Luz Morais</span>
+    </div>
+  </footer>
+
+  <script src="./js/db.js"></script>
+  <script src="./js/pages/usuario-matriz-editar.js"></script>
+</body>
+</html>
+
