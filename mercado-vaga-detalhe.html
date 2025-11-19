@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Detalhe da Vaga</title>
+
+  <meta name="description" content="Detalhe da vaga para empresas no D³, com matriz de habilidades e talentos recomendados.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/mercado-vaga-detalhe.css" />
+</head>
+<body data-page="mercado-vaga-detalhe">
+<header class="topbar">
+  <div class="container topbar__content">
+    <div class="logo">
+      <span class="logo__mark">D³</span>
+      <div class="logo__group">
+        <span class="logo__text">Vaga e Talentos</span>
+        <span class="logo__tag">Matriz de habilidades e recomendações de IA</span>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <div class="topbar__pill">
+        <span class="topbar__label">Perfil</span>
+        <span class="topbar__value">Mercado</span>
+      </div>
+      <button class="topbar__avatar-btn" type="button">
+        <span class="topbar__avatar-iniciais">ME</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="page page--vaga-detalhe">
+  <div class="container">
+    <a href="./dashboard-mercado.html" class="breadcrumb-voltar">
+      ← Voltar para o painel da Empresa
+    </a>
+
+    <section class="layout">
+      <!-- COL ESQUERDA: VAGA + MATRIZ -->
+      <div class="col col--principal">
+        <header class="vaga-header">
+          <h1 class="vaga-titulo" data-vaga-titulo>Nome da Vaga</h1>
+          <p class="vaga-meta" data-vaga-meta>Tipo, local, modelo…</p>
+        </header>
+
+        <section class="vaga-bloco">
+          <h2 class="bloco-titulo">Descrição da vaga</h2>
+          <p class="bloco-texto" data-vaga-descricao></p>
+        </section>
+
+        <section class="vaga-bloco">
+          <h2 class="bloco-titulo">Matriz de habilidades da vaga</h2>
+          <table class="tabela" aria-label="Matriz de habilidades da vaga">
+            <thead>
+              <tr>
+                <th>Habilidade</th>
+                <th>Importância</th>
+                <th>Nível desejado</th>
+              </tr>
+            </thead>
+            <tbody data-vaga-matriz>
+              <!-- via JS -->
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <!-- COL DIREITA: TALENTOS + IA -->
+      <aside class="col col--lateral">
+        <section class="vaga-bloco">
+          <h2 class="bloco-titulo">Talentos recomendados</h2>
+          <div class="talentos-lista" data-vaga-talentos></div>
+        </section>
+
+        <section class="vaga-bloco vaga-bloco--ia">
+          <h2 class="bloco-titulo">IA · Insights para esta vaga</h2>
+          <ul class="ia-lista" data-vaga-ia></ul>
+        </section>
+      </aside>
+    </section>
+  </div>
+</main>
+
+<script src="./js/mercado-vaga-detalhe.js"></script>
+</body>
+</html>

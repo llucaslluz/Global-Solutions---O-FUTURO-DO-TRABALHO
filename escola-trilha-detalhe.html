@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D³ – Detalhe da Trilha (Escola)</title>
+
+  <meta name="description" content="Detalhe administrativo de uma trilha da escola no D³.">
+  <link rel="icon" href="./assets/img/webD.png" type="image/png">
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- CSS específico -->
+  <link rel="stylesheet" href="./css/escola-trilha-detalhe.css" />
+</head>
+<body data-page="escola-trilha-detalhe">
+<header class="topbar">
+  <div class="container topbar__content">
+    <div class="logo">
+      <span class="logo__mark">D³</span>
+      <div class="logo__group">
+        <span class="logo__text">Trilha da Escola</span>
+        <span class="logo__tag">Visão completa da formação e dos alunos</span>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <div class="topbar__pill">
+        <span class="topbar__label">Perfil</span>
+        <span class="topbar__value">Escola</span>
+      </div>
+      <button class="topbar__avatar-btn" type="button">
+        <span class="topbar__avatar-iniciais">ES</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="page page--trilha-detalhe">
+  <div class="container">
+    <a href="./dashboard-escola.html" class="breadcrumb-voltar">← Voltar para o painel da Escola</a>
+
+    <section class="layout">
+      <!-- COLUNA ESQUERDA: INFO PRINCIPAL -->
+      <div class="col col--principal">
+        <header class="trilha-header">
+          <h1 class="trilha-nome" data-trilha-nome>Nome da trilha</h1>
+          <span class="trilha-etiqueta" data-trilha-modalidade>Formação • Presencial / Online</span>
+        </header>
+
+        <div class="trilha-bloco trilha-bloco--resumo">
+          <h2 class="bloco-titulo">Visão geral</h2>
+          <p class="bloco-texto" data-trilha-descricao>
+            Aqui entrarão os objetivos, público-alvo e contexto da trilha.
+          </p>
+
+          <div class="bloco-grid-metricas">
+            <article class="metric-card">
+              <span class="metric-label">Carga horária</span>
+              <strong class="metric-valor" data-trilha-carga>–</strong>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Alunos mapeados</span>
+              <strong class="metric-valor" data-trilha-alunos>–</strong>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Taxa de conclusão</span>
+              <strong class="metric-valor" data-trilha-conclusao>–</strong>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Vagas conectadas</span>
+              <strong class="metric-valor" data-trilha-vagas>–</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="trilha-bloco">
+          <h2 class="bloco-titulo">Skills trabalhadas na trilha</h2>
+          <div class="chips" data-trilha-skills></div>
+        </div>
+
+        <div class="trilha-bloco">
+          <h2 class="bloco-titulo">Turmas e alunos</h2>
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>Turma</th>
+                <th>Alunos</th>
+                <th>Conclusão média</th>
+              </tr>
+            </thead>
+            <tbody data-trilha-turmas>
+              <!-- Preenchido via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- COLUNA DIREITA: IA + MERCADO -->
+      <aside class="col col--lateral">
+        <section class="trilha-bloco trilha-bloco--ia">
+          <h2 class="bloco-titulo">IA · Recomendações para esta trilha</h2>
+          <p class="bloco-texto" data-ia-contexto>
+            A IA analisou dados de vagas conectadas, habilidades dos alunos e tendências de mercado.
+          </p>
+
+          <ul class="ia-lista" data-ia-lista></ul>
+        </section>
+
+        <section class="trilha-bloco trilha-bloco--vagas">
+          <h2 class="bloco-titulo">Vagas conectadas a esta trilha</h2>
+          <div class="vagas-lista" data-trilha-vagas-lista></div>
+        </section>
+      </aside>
+    </section>
+  </div>
+</main>
+
+<script src="./js/escola-trilha-detalhe.js"></script>
+</body>
+</html>
