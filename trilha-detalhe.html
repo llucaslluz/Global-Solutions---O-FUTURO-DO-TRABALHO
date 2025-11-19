@@ -36,14 +36,13 @@
   <main>
     <section class="section">
       <div class="container trilha-detalhe">
-        <!-- Cabeçalho da trilha -->
         <header class="page-header">
           <div>
-            <span class="badge badge--trilha" data-trilha-tipo>Trilha</span>
-            <h1 class="section__title" data-trilha-nome>Nome da trilha</h1>
+            <span class="badge badge--trilha" data-trilha-tipo>Requalificação</span>
+            <h1 class="section__title" data-trilha-nome>Transição para área de Dados</h1>
             <p class="section__subtitle" data-trilha-resumo>
-              Descrição resumida da trilha, explicando para quem ela foi pensada
-              e qual objetivo principal.
+              Trilha pensada para profissionais que já atuam em áreas técnicas ou industriais e
+              querem migrar gradualmente para a área de dados, aproveitando a experiência atual.
             </p>
           </div>
           <button class="btn btn--ghost" onclick="location.href='usuario-trilhas.html'">
@@ -52,44 +51,61 @@
         </header>
 
         <div class="trilha-detalhe-layout">
-          <!-- Coluna principal -->
           <div class="trilha-detalhe-main card">
             <h2>Resumo da trilha</h2>
-            <p data-trilha-descricao>
-              Esta trilha combina fundamentos técnicos e soft skills para levar você
-              de um nível iniciante/intermediário até um nível em que já consegue
-              atuar em projetos reais.
+            <p>
+              Esta trilha combina fundamentos de programação, banco de dados e visualização de dados
+              com uma visão prática voltada à indústria. A ideia é que você consiga, em poucos meses,
+              sair de um nível iniciante e chegar a um nível em que já é capaz de atuar em projetos reais.
             </p>
 
             <div class="trilha-meta">
-              <span><strong>Duração estimada:</strong> <span data-trilha-duracao>—</span></span>
-              <span><strong>Nível alvo:</strong> <span data-trilha-nivel>—</span></span>
-              <span><strong>Formato:</strong> <span data-trilha-formato>—</span></span>
-              <span><strong>Instituição:</strong> <span data-trilha-instituicao>—</span></span>
+              <span><strong>Duração estimada:</strong> <span data-trilha-duracao>6–9 meses</span></span>
+              <span><strong>Nível alvo:</strong> <span data-trilha-nivel>Júnior / Pleno inicial</span></span>
+              <span><strong>Instituição:</strong> <span data-trilha-instituicao>FIAP / Parceiros</span></span>
             </div>
 
             <h3>Etapas principais</h3>
-            <ol class="trilha-steps" data-trilha-steps>
-              <!-- JS vai montar os <li> aqui -->
+            <!-- Você pode manter esse bloco estático como exemplo textual -->
+            <ol class="trilha-steps">
+              <li>
+                <strong>Fundamentos de programação e lógica (Python ou similar)</strong>
+                <span>Controle de fluxo, estruturas de dados, boas práticas básicas.</span>
+              </li>
+              <li>
+                <strong>Banco de dados e SQL aplicado</strong>
+                <span>Modelagem simples, consultas, joins e criação de relatórios.</span>
+              </li>
+              <li>
+                <strong>Visualização de dados e dashboards</strong>
+                <span>Ferramentas de BI, construção de gráficos e painéis interativos.</span>
+              </li>
+              <li>
+                <strong>Projeto prático com dados da indústria</strong>
+                <span>Aplicação dos conhecimentos em um conjunto de dados próximo da sua realidade.</span>
+              </li>
             </ol>
+
+            <!-- Bloco dinâmico (JS vai preencher com window.d3mock.trilhas[].conteudo) -->
+            <h3>Conteúdos principais da trilha</h3>
+            <ul class="list" data-trilha-conteudo></ul>
           </div>
 
-          <!-- Coluna lateral -->
           <aside class="trilha-detalhe-side card">
             <h2>Conexão com sua matriz</h2>
-            <p data-trilha-matriz-text>
-              Esta trilha foi recomendada com base nos gaps em habilidades técnicas,
-              comunicação e fundamentos de IA identificados na sua matriz.
+            <p>
+              A partir dos seus gaps em Python, banco de dados e comunicação com times multidisciplinares,
+              esta trilha foi recomendada como uma das mais alinhadas ao seu perfil.
             </p>
 
-            <ul class="list" data-trilha-beneficios>
-              <li>Reduz gaps em <strong>habilidades técnicas</strong></li>
-              <li>Fortalece <strong>comunicação em times multidisciplinares</strong></li>
-              <li>Prepara para vagas relacionadas à trilha selecionada</li>
+            <ul class="list">
+              <li>Reduz gaps em <strong>habilidades técnicas</strong> (programação e dados)</li>
+              <li>Estimula <strong>raciocínio analítico</strong> e visão baseada em dados</li>
+              <li>Prepara para vagas como <strong>Analista de Dados Júnior</strong></li>
             </ul>
 
-            <button class="btn btn--primary trilha-action-btn" id="btnAddTrilha">
-              Adicionar à minha jornada (demo)
+            <button class="btn btn--primary trilha-action-btn" disabled>
+              Adicionar à minha jornada (em breve)
             </button>
 
             <button class="btn btn--ghost" onclick="location.href='usuario-oportunidades.html'">
@@ -108,8 +124,7 @@
     </div>
   </footer>
 
-  <!-- mocks + lógica da tela -->
-  <script src="./js/mock/d3-mock.js"></script>
+  <script src="./js/pages/d3-mock.js"></script>
   <script src="./js/pages/trilha-detalhe.js"></script>
 </body>
 </html>
