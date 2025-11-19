@@ -3,71 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>D³ – Dashboard Mercado</title>
+  <title>D³ – Painel da Empresa</title>
 
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/dashboard-mercado.css" />
+  <meta name="description" content="Painel da Empresa no D³: vagas, talentos e matriz de habilidades conectadas às trilhas.">
   <link rel="icon" href="./assets/img/webD.png" type="image/png">
-</head>
 
-<body>
+  <!-- CSS global -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- CSS específico da empresa -->
+  <link rel="stylesheet" href="./css/dashboard-mercado.css" />
+</head>
+<body data-page="dashboard-mercado">
+  <!-- TOPBAR -->
   <header class="topbar">
     <div class="container topbar__content">
-      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+      <div class="logo">
         <span class="logo__mark">D³</span>
         <div class="logo__group">
-          <span class="logo__text">Decisões Definem Destinos</span>
-          <span class="logo__tag">Empresa</span>
+          <span class="logo__text">Painel da Empresa</span>
+          <span class="logo__tag">Conectando talentos e habilidades do futuro</span>
         </div>
       </div>
 
-      <nav class="nav">
-        <a href="mercado-vagas.html">Vagas</a>
-        <a href="mercado-detalhe-vaga.html">Cadastrar vaga</a>
-        <a href="#" data-logout class="nav__cta">Sair</a>
-      </nav>
+      <div class="topbar__right">
+        <div class="topbar__pill">
+          <span class="topbar__label">Perfil</span>
+          <span class="topbar__value">Mercado</span>
+        </div>
+        <button class="topbar__avatar-btn" type="button">
+          <span class="topbar__avatar-iniciais">ME</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="dashboard">
-    <div class="container">
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="page page--dashboard-mercado">
+    <div class="container page__grid">
+      <!-- COLUNA 1: RESUMO DA EMPRESA -->
+      <section class="panel panel--resumo">
+        <header class="panel__header">
+          <h1 class="panel__title">Resumo da Empresa</h1>
+          <p class="panel__subtitle">Quantas vagas, talentos e trilhas estão conectados ao D³.</p>
+        </header>
 
-      <h1>Bem-vindo(a), <span data-user-name></span></h1>
-      <p class="subtitle">Gerencie vagas, habilidades e relação com candidatos.</p>
+        <div class="resumo__cards">
+          <article class="resumo-card">
+            <span class="resumo-card__label">Vagas abertas</span>
+            <strong class="resumo-card__value" data-mercado-vagas>–</strong>
+            <span class="resumo-card__hint">Com matriz de habilidades definida</span>
+          </article>
 
-      <div class="grid grid--3 dashboard-cards">
+          <article class="resumo-card">
+            <span class="resumo-card__label">Talentos mapeados</span>
+            <strong class="resumo-card__value" data-mercado-talentos>–</strong>
+            <span class="resumo-card__hint">Candidatos alinhados às suas trilhas</span>
+          </article>
 
-        <div class="card">
-          <h3>Vagas abertas</h3>
-          <p>Visualize e edite as vagas cadastradas pela sua empresa.</p>
-          <button onclick="location.href='mercado-vagas.html'" class="btn btn--primary">Ver vagas</button>
+          <article class="resumo-card">
+            <span class="resumo-card__label">Escolas parceiras</span>
+            <strong class="resumo-card__value" data-mercado-escolas>–</strong>
+            <span class="resumo-card__hint">Que alimentam seu funil de talentos</span>
+          </article>
         </div>
 
-        <div class="card">
-          <h3>Novo cadastro de vaga</h3>
-          <p>Defina habilidades e requisitos alinhados às tendências do mercado.</p>
-          <button onclick="location.href='mercado-detalhe-vaga.html'" class="btn btn--primary">Cadastrar</button>
+        <div class="resumo__info">
+          <h2 class="resumo__nome" data-mercado-nome>Nome da Empresa</h2>
+          <p class="resumo__descricao" data-mercado-descricao>
+            Aqui virá um resumo curto da empresa, área de atuação e foco de contratação.
+          </p>
+          <div class="resumo__tags" data-mercado-tags></div>
+        </div>
+      </section>
+
+      <!-- COLUNA 2: VAGAS E TALENTOS -->
+      <section class="panel panel--vagas">
+        <header class="panel__header">
+          <div>
+            <h2 class="panel__title">Vagas & Talentos</h2>
+            <p class="panel__subtitle">
+              Mapeie habilidades, conecte com trilhas e acompanhe o funil de candidatos.
+            </p>
+          </div>
+          <div class="panel__actions">
+            <button class="btn btn--ghost" type="button">Criar nova vaga</button>
+            <button class="btn btn--primary" type="button">Ver candidatos</button>
+          </div>
+        </header>
+
+        <div class="vagas-lista" data-vagas-lista>
+          <!-- Cards de vaga inseridos via JS -->
+        </div>
+      </section>
+
+      <!-- COLUNA 3: IA – TENDÊNCIAS -->
+      <section class="panel panel--ia">
+        <header class="panel__header">
+          <h2 class="panel__title">IA · Tendências e alertas de skills</h2>
+          <p class="panel__subtitle">
+            O D³ analisa trilhas, matrizes e habilidades dos talentos para sugerir próximos passos.
+          </p>
+        </header>
+
+        <div class="ia__alerta" data-ia-alerta>
+          A IA está processando as tendências mais recentes…
         </div>
 
-        <div class="card">
-          <h3>Análise de talentos</h3>
-          <p>Acompanhe perfis compatíveis com as vagas abertas.</p>
-          <button class="btn btn--primary">Analisar talentos</button>
+        <ul class="ia__lista" data-ia-lista>
+          <!-- Insights adicionados via JS -->
+        </ul>
+      </section>
+    </div>
+
+    <!-- LINHA INFERIOR: RADAR DE HABILIDADES -->
+    <div class="container page__grid page__grid--full">
+      <section class="panel panel--skills">
+        <header class="panel__header">
+          <h2 class="panel__title">Radar de Habilidades</h2>
+          <p class="panel__subtitle">
+            Skills mais presentes nos talentos mapeados x skills mais exigidas nas vagas.
+          </p>
+        </header>
+
+        <div class="skills__grid" data-skills-grid>
+          <!-- Cards de habilidades populados via JS -->
         </div>
-
-      </div>
-
+      </section>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__content">
-      <span>D³ – Mercado</span>
-      <span>by Lucas da Luz Morais</span>
-    </div>
-  </footer>
-
-  <script src="./js/db.js"></script>
+  <!-- JS -->
   <script src="./js/pages/dashboard-mercado.js"></script>
 </body>
 </html>

@@ -3,71 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>D³ – Dashboard Escola</title>
+  <title>D³ – Painel da Escola</title>
 
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/dashboard-escola.css" />
+  <meta name="description" content="Painel da Escola no D³: trilhas, turmas, conexões com o mercado e insights de IA.">
   <link rel="icon" href="./assets/img/webD.png" type="image/png">
-</head>
 
-<body>
+  <!-- CSS global -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- CSS específico da escola -->
+  <link rel="stylesheet" href="./css/dashboard-escola.css" />
+</head>
+<body data-page="dashboard-escola">
+  <!-- TOPBAR -->
   <header class="topbar">
     <div class="container topbar__content">
-      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+      <div class="logo">
         <span class="logo__mark">D³</span>
         <div class="logo__group">
-          <span class="logo__text">Decisões Definem Destinos</span>
-          <span class="logo__tag">Instituição de Ensino</span>
+          <span class="logo__text">Painel da Escola</span>
+          <span class="logo__tag">Conectando formações ao futuro do trabalho</span>
         </div>
       </div>
 
-      <nav class="nav">
-        <a href="escola-cursos.html">Cursos</a>
-        <a href="escola-detalhe-curso.html">Detalhes</a>
-        <a href="#" data-logout class="nav__cta">Sair</a>
-      </nav>
+      <div class="topbar__right">
+        <div class="topbar__pill">
+          <span class="topbar__label">Perfil</span>
+          <span class="topbar__value">Escola</span>
+        </div>
+        <button class="topbar__avatar-btn" type="button">
+          <span class="topbar__avatar-iniciais">ES</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="dashboard">
-    <div class="container">
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="page page--dashboard-escola">
+    <div class="container page__grid">
+      <!-- COLUNA 1: RESUMO DA ESCOLA -->
+      <section class="panel panel--resumo">
+        <header class="panel__header">
+          <h1 class="panel__title">Resumo da Escola</h1>
+          <p class="panel__subtitle">Visão geral rápida das suas trilhas e turmas.</p>
+        </header>
 
-      <h1>Bem-vindo(a), <span data-user-name></span></h1>
-      <p class="subtitle">Gerencie cursos, trilhas e impacto de ensino no D³.</p>
+        <div class="resumo__cards">
+          <article class="resumo-card">
+            <span class="resumo-card__label">Trilhas ativas</span>
+            <strong class="resumo-card__value" data-escola-trilhas-ativas>–</strong>
+            <span class="resumo-card__hint">Trilhas conectadas ao D³</span>
+          </article>
 
-      <div class="grid grid--3 dashboard-cards">
+          <article class="resumo-card">
+            <span class="resumo-card__label">Alunos mapeados</span>
+            <strong class="resumo-card__value" data-escola-alunos>–</strong>
+            <span class="resumo-card__hint">Com perfil e matriz de habilidades</span>
+          </article>
 
-        <div class="card">
-          <h3>Meus cursos</h3>
-          <p>Gerencie todos os cursos cadastrados pela sua instituição.</p>
-          <button onclick="location.href='escola-cursos.html'" class="btn btn--primary">Ver cursos</button>
+          <article class="resumo-card">
+            <span class="resumo-card__label">Parcerias com empresas</span>
+            <strong class="resumo-card__value" data-escola-parcerias>–</strong>
+            <span class="resumo-card__hint">Que usam suas trilhas como base</span>
+          </article>
         </div>
 
-        <div class="card">
-          <h3>Adicionar novo curso</h3>
-          <p>Cadastre cursos definindo habilidades e impacto profissional.</p>
-          <button onclick="location.href='escola-detalhe-curso.html'" class="btn btn--primary">Cadastrar</button>
+        <div class="resumo__info">
+          <h2 class="resumo__nome" data-escola-nome>Nome da Escola</h2>
+          <p class="resumo__descricao" data-escola-descricao>
+            Aqui virá uma descrição curta da escola, áreas de atuação e foco principal.
+          </p>
+          <div class="resumo__tags" data-escola-tags></div>
+        </div>
+      </section>
+
+      <!-- COLUNA 2: TRILHAS E TURMAS -->
+      <section class="panel panel--trilhas">
+        <header class="panel__header">
+          <div>
+            <h2 class="panel__title">Trilhas & Turmas conectadas ao D³</h2>
+            <p class="panel__subtitle">Acompanhe como suas formações conversam com o mercado.</p>
+          </div>
+          <div class="panel__actions">
+            <button class="btn btn--ghost" type="button">Criar nova trilha</button>
+            <button class="btn btn--primary" type="button">Conectar à vaga</button>
+          </div>
+        </header>
+
+        <div class="trilhas-lista" data-trilhas-lista>
+          <!-- Cards de trilha inseridos via JS -->
+        </div>
+      </section>
+
+      <!-- COLUNA 3: INSIGHTS DE IA -->
+      <section class="panel panel--ia">
+        <header class="panel__header">
+          <h2 class="panel__title">IA · Insights para sua escola</h2>
+          <p class="panel__subtitle">Sugestões de ajustes nas trilhas com base nas tendências do mercado.</p>
+        </header>
+
+        <div class="ia__alerta" data-ia-alerta>
+          A IA ainda está carregando os insights…
         </div>
 
-        <div class="card">
-          <h3>Impacto no mercado</h3>
-          <p>Visualize como seus cursos alimentam profissões e carreiras.</p>
-          <button class="btn btn--primary">Ver métricas</button>
+        <ul class="ia__lista" data-ia-lista>
+          <!-- Insights adicionados via JS -->
+        </ul>
+      </section>
+    </div>
+
+    <!-- LINHA INFERIOR: CONEXÕES COM O MERCADO -->
+    <div class="container page__grid page__grid--full">
+      <section class="panel panel--conexoes">
+        <header class="panel__header">
+          <h2 class="panel__title">Conexões com o Mercado</h2>
+          <p class="panel__subtitle">
+            Veja quais empresas estão usando suas trilhas e quais vagas estão ligadas aos seus cursos.
+          </p>
+        </header>
+
+        <div class="conexoes__grid" data-conexoes-grid>
+          <!-- Conexões com empresas populadas via JS -->
         </div>
-
-      </div>
-
+      </section>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__content">
-      <span>D³ – Instituições</span>
-      <span>by Lucas da Luz Morais</span>
-    </div>
-  </footer>
-
-  <script src="./js/db.js"></script>
+  <!-- JS -->
   <script src="./js/pages/dashboard-escola.js"></script>
 </body>
 </html>
