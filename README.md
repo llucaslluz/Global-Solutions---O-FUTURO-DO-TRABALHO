@@ -1,5 +1,22 @@
 # D³ – Decisões, Destinos e Desenvolvimento
 > Uma plataforma guiada por Inteligência Artificial que conecta pessoas, empresas e instituições de ensino através de matrizes de habilidades — ajudando cada indivíduo a entender quem é hoje, o que falta desenvolver, para onde pode ir e como evoluir de forma estratégica no futuro do trabalho.
+---
+
+## 🚀 Como Acessar o Site:
+ https://global-solutions-o-futuro-do-trabal.vercel.app/
+ 
+ Usuário: 
+- Login: lucas@exemplo.com                           
+
+Escola:
+ - Login: contato@techfuturo.com                               
+
+Empresa
+ - Login: rh@iatalentos.com
+
+Senha para todos os USUÁRIOS:
+ - Senha: 123456
+
 
 ---
 
@@ -268,6 +285,7 @@ Aluno FIAP – ADS
 ## 📽️ Vídeo Pitch
 
 Disponível no slide final da apresentação.
+https://www.youtube.com/watch?v=K6-qHuVyKuI
 
 ---
 
